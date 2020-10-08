@@ -1,0 +1,16 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: content
+        type: markdown
+  meta:
+    display: SEO Metadata
+    fields:
+      -
+        handle: meta_title
+        type: text
+      -
+        handle: meta_description
+        type: textarea
