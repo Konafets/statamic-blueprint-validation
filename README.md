@@ -2,7 +2,7 @@
 
 **This is work in progress**
 
-![Example](assets/demo.gif)
+![Example](assets/Demo.gif)
 
 ## Setup
 
@@ -13,7 +13,7 @@
    - **Schema file or URL**: `https://raw.githubusercontent.com/Konafets/statamic-blueprint-validation/main/statamic.blueprint.schema.json`
    - **Directory**: `resources/blueprints`
 
-![Example](assets/setup.gif)
+![Example](assets/setup.png)
 
 ## Credits
 
