@@ -2,7 +2,7 @@
 
 **This is work in progress**
 
-![Example](assets/Demo.gif)
+![Example](assets/demo.gif)
 
 ## Setup
 
@@ -10,9 +10,10 @@
 
 1. Open PhpStorm and switch to *File > Preferences > Languages & Frameworks > Schemas and DTDs > JSON Schema Mappings*
 2. Add a new entry with the following options
-   - **Schema file or URL**: `https://raw.githubusercontent.com/Konafets/statamic-blueprint-validation/master/statamic.blueprint.schema.json`
+   - **Schema file or URL**: `https://raw.githubusercontent.com/Konafets/statamic-blueprint-validation/main/statamic.blueprint.schema.json`
    - **Directory**: `resources/blueprints`
-3. Provide path to the directory containing the yaml files.
+
+![Example](assets/setup.gif)
 
 ## Credits
 
