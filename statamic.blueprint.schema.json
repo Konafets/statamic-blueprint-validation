@@ -79,12 +79,40 @@
                     "description": "The definition of a single field.",
                     "type": "object",
                     "properties": {
+                      "display": {
+                        "type": "string"
+                      },
+                      "instructions": {
+                        "type": "string",
+                        "description": "Shown under the field's display label, like this very text. Markdown is supported."
+                      },
+                      "instructions_position": {
+                        "type": "string",
+                        "enum": [
+                          "above",
+                          "below"
+                        ]
+                      },
+                      "listable": {
+                        "oneOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "string",
+                            "pattern": "hidden"
+                          }
+                        ]
+                      },
                       "type": {
                         "type": "string",
                         "description": "Type of field aka the fieldtype.",
                         "$ref": "#/definitions/fieldTypes"
                       },
                       "required": {
+                        "type": "boolean"
+                      },
+                      "localizable": {
                         "type": "boolean"
                       },
                       "validate": {
