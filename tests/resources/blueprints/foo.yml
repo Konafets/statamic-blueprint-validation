@@ -10,7 +10,21 @@ sections:
     fields:
       -
         handle: meta_title
-        type: text
+        field:
+          type: text
+          listable: false
+          instructions: Bar
+      -
+        handle: toggle
+        field:
+          type: toggle
+          listable: false
+          instructions: Foo Bar
+          instructions_position: above
+          display: Toggle
+
+
+
       -
         handle: meta_description
         type: textarea
