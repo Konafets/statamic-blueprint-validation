@@ -2,41 +2,9 @@
   "title": "JSON schema for Statamics Blueprint",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["sections"],
-  "definitions": {
-    "fieldTypes": {
-      "enum": [
-        "array",
-        "assets",
-        "bard",
-        "button_group",
-        "checkboxes",
-        "code",
-        "color",
-        "date",
-        "hidden",
-        "integer",
-        "list",
-        "markdown",
-        "radio",
-        "range",
-        "revealer",
-        "section",
-        "select",
-        "table",
-        "tags",
-        "template",
-        "terms",
-        "text",
-        "textarea",
-        "time",
-        "toggle",
-        "users",
-        "video",
-        "yaml"
-      ]
-    }
-  },
+  "required": [
+    "sections"
+  ],
   "properties": {
     "title": {
       "type": "string"
@@ -116,10 +84,31 @@
                         "type": "boolean"
                       },
                       "validate": {
+                        "description": "The validation rules for that field",
                         "type": "array",
                         "items": {
-                          "type": "string",
-                          "enum": ["required", "string"]
+                          "anyOf": [
+                            {
+                              "$ref": "#/definitions/ruleMin"
+                            },
+                            {
+                              "$ref": "#/definitions/validationRules"
+                            }
+                          ],
+                          "minItems": 1,
+                          "uniqueItems": true
+                        }
+                      },
+                      "if": {
+                        "properties": {
+                          "type": { "const": "toggle"}
+                        }
+                      },
+                      "then": {
+                        "properties": {
+                          "foo": {
+                            "type": "string"
+                          }
                         }
                       }
                     }
@@ -130,6 +119,84 @@
           }
         }
       }
+    }
+  },
+  "definitions": {
+    "fieldTypes": {
+      "enum": [
+        "array",
+        "assets",
+        "bard",
+        "button_group",
+        "checkboxes",
+        "code",
+        "color",
+        "date",
+        "hidden",
+        "integer",
+        "list",
+        "markdown",
+        "radio",
+        "range",
+        "revealer",
+        "section",
+        "select",
+        "table",
+        "tags",
+        "template",
+        "terms",
+        "text",
+        "textarea",
+        "time",
+        "toggle",
+        "users",
+        "video",
+        "yaml"
+      ]
+    },
+    "ruleMin": {
+      "type": "string",
+      "pattern": "^((accepted|declined|exclude)_if:\\S+,\\S+|(after|before):[\\w\\d_-]+|(after|before)_or_equal:[\\w\\d_-]+|between:\\d+,\\d+|date_equals:[\\w\\d_-]+|date_format:[\\w\\d_-]+|different:\\S+|digits:\\d+|digits_between:\\d+,\\d+|ends_with:\\S+,\\S+|exclude_unless:\\S+,\\S+|exclude_without:\\S+|exists:\\S+,\\S+|[lg]t(e)?:\\S+|in:\\S+,\\S+|in_array:\\S+|(min|max):\\d+|mimetypes:\\S+|mimes:\\S+|multiple_of:\\d+|not_in:\\S+,\\S+|(not_)?regex:\\S+|prohibited_(if|unless):[\\S_]+,\\S+|prohibits:(\\S)+,(\\S)+|required_(if|unless):\\S+,\\d+|required_(with|with_all|without|without_all):\\S+,\\S+|same:\\S+|size:\\d+|starts_with:\\S+,\\S+|unique:\\S+,\\S+|unique_user_value:[\\{(collection|id|site)\\}]+)$"
+    },
+    "validationRules": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "active_url",
+        "required",
+        "alpha",
+        "alpha_dash",
+        "alpha_num",
+        "array",
+        "bail",
+        "boolean",
+        "confirmed",
+        "current_password",
+        "date",
+        "declined",
+        "dimensions",
+        "distinct",
+        "email",
+        "enum",
+        "exclude",
+        "file",
+        "filled",
+        "image",
+        "integer",
+        "ip",
+        "ipv4",
+        "ipv6",
+        "json",
+        "nullable",
+        "numeric",
+        "password",
+        "present",
+        "prohibited",
+        "string",
+        "timezone",
+        "url",
+        "uuid"
+      ]
     }
   }
 }

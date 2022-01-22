@@ -13,6 +13,7 @@ sections:
             - string
           listable: true
           input_type: text
+          instructions: Foo Bar baz
       -
         handle: price
         field:
@@ -20,7 +21,93 @@ sections:
           required: true
           listable: true
           validate:
-              - min:0
+            - accepted
+            - accepted_if:another_field,10,foo,bar
+            - active_url
+            - after:tomorrow
+            - after:yesterday
+            - after_or_equal:tomorrow
+            - after_or_equal:yesterday
+            - alpha
+            - alpha_dash
+            - alpha_num
+            - array
+            - bail
+            - before:tomorrow
+            - before:yesterday
+            - before_or_equal:tomorrow
+            - before_or_equal:yesterday
+            - between:10,12
+            - boolean
+            - confirmed
+            - current_password
+            - date
+            - date_equals:date
+            - date_format:format
+            - declined
+            - declined_if:anotherfield,value
+            - different:field
+            - digits:10
+            - digits_between:0,10
+            - dimensions
+            - distinct
+            - email
+            - ends_with:foo,bar,
+            - enum
+            - exclude
+            - exclude_if:anotherfield,value
+            - exclude_unless:anotherfield,value
+            - exclude_without:anotherfield
+            - exists:table,column
+            - file
+            - filled
+            - gt:field
+            - gte:field
+            - image
+            - in:foo,bar,baz
+            - in_array:anotherfield.*
+            - integer
+            - ip
+            - ipv4
+            - ipv6
+            - json
+            - lt:field
+            - lte:field
+            - max:10
+            - mimetypes:text/plain,text/javascript
+            - mimes:foo,bar,...
+            - 'min:10'
+            - 'multiple_of:10'
+            - not_in:foo,bar,...
+            - not_regex:/^(foo|bar|baz)+$/
+            - nullable
+            - numeric
+            - password
+            - present
+            - prohibited
+            - prohibited_if:anotherfield,value,...
+            - prohibited_unless:anotherfield,value,...
+            - prohibits:another_field,foo
+            - regex:pattern
+            - required
+            - required_if:anotherfield,10,dd,20
+            - required_unless:anotherfield,10,foo,20
+            - required_with:foo,bar
+            - required_with_all:foo,bar
+            - required_without:foo,bar
+            - required_without_all:foo,bar
+            - same:field
+            - size:10
+            - starts_with:foo,bar
+            - string
+            - timezone
+            - unique:table,column
+            - url
+            - uuid
+            - 'unique_user_value:{id}'
+            - 'unique_user_value:{collection}'
+            - 'unique_user_value:{site}'
+
           width: '25'
       -
         handle: images
@@ -92,3 +179,5 @@ sections:
           validate:
             - required
             - boolean
+  links:
+    type: grid
