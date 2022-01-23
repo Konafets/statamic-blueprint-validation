@@ -150,39 +150,6 @@
     }
   },
   "$defs": {
-    "fieldTypes": {
-      "type": "string",
-      "enum": [
-        "array",
-        "assets",
-        "bard",
-        "button_group",
-        "checkboxes",
-        "code",
-        "color",
-        "date",
-        "hidden",
-        "integer",
-        "list",
-        "markdown",
-        "radio",
-        "range",
-        "revealer",
-        "section",
-        "select",
-        "table",
-        "tags",
-        "template",
-        "terms",
-        "text",
-        "textarea",
-        "time",
-        "toggle",
-        "users",
-        "video",
-        "yaml"
-      ]
-    },
     "array": {
       "type": "object",
       "properties": {
@@ -507,11 +474,6 @@
           "pattern": "hidden"
         }
       ]
-    },
-    "type": {
-      "type": "string",
-      "description": "Type of field aka the fieldtype.",
-      "$ref": "#/$defs/fieldTypes"
     },
     "required": {
       "type": "boolean"
