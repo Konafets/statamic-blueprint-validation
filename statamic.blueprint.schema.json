@@ -1,0 +1,583 @@
+{
+  "title": "A Statamic Blueprint JSON Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "sections"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "sections": {
+      "title": "The Sections",
+      "description": "At its most basic, a blueprint has sections. A section has a handle, a display name, and an array of fields:",
+      "type": "object",
+      "minItems": 1,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[A-Za-z]+$": {
+          "type": "object",
+          "description": "The handle (name) of a section. This one is on you.",
+          "required": [
+            "display",
+            "fields"
+          ],
+          "properties": {
+            "display": {
+              "type": "string",
+              "description": "The displayed text."
+            },
+            "fields": {
+              "type": "array",
+              "description": "Here you define the fields of this section.",
+              "items": {
+                "type": "object",
+                "required": [
+                  "handle"
+                ],
+                "properties": {
+                  "handle": {
+                    "type": "string",
+                    "description": "The handle"
+                  },
+                  "config": {
+                    "type": "object",
+                    "properties": {
+                      "display": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "field": {
+                    "description": "The definition of a single field.",
+                    "anyOf": [
+                      {
+                        "$ref": "#/$defs/array"
+                      },
+                      {
+                        "$ref": "#/$defs/assets"
+                      },
+                      {
+                        "$ref": "#/$defs/bard"
+                      },
+                      {
+                        "$ref": "#/$defs/button_group"
+                      },
+                      {
+                        "$ref": "#/$defs/checkboxes"
+                      },
+                      {
+                        "$ref": "#/$defs/code"
+                      },
+                      {
+                        "$ref": "#/$defs/color"
+                      },
+                      {
+                        "$ref": "#/$defs/date"
+                      },
+                      {
+                        "$ref": "#/$defs/hidden"
+                      },
+                      {
+                        "$ref": "#/$defs/integer"
+                      },
+                      {
+                        "$ref": "#/$defs/list"
+                      },
+                      {
+                        "$ref": "#/$defs/markdown"
+                      },
+                      {
+                        "$ref": "#/$defs/radio"
+                      },
+                      {
+                        "$ref": "#/$defs/range"
+                      },
+                      {
+                        "$ref": "#/$defs/revealer"
+                      },
+                      {
+                        "$ref": "#/$defs/section"
+                      },
+                      {
+                        "$ref": "#/$defs/select"
+                      },
+                      {
+                        "$ref": "#/$defs/table"
+                      },
+                      {
+                        "$ref": "#/$defs/tags"
+                      },
+                      {
+                        "$ref": "#/$defs/template"
+                      },
+                      {
+                        "$ref": "#/$defs/terms"
+                      },
+                      {
+                        "$ref": "#/$defs/text"
+                      },
+                      {
+                        "$ref": "#/$defs/textarea"
+                      },
+                      {
+                        "$ref": "#/$defs/time"
+                      },
+                      {
+                        "$ref": "#/$defs/toggle"
+                      },
+                      {
+                        "$ref": "#/$defs/users"
+                      },
+                      {
+                        "$ref": "#/$defs/video"
+                      },
+                      {
+                        "$ref": "#/$defs/yaml"
+                      }
+                    ],
+                    "required": [
+                      "type"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "fieldTypes": {
+      "type": "string",
+      "enum": [
+        "array",
+        "assets",
+        "bard",
+        "button_group",
+        "checkboxes",
+        "code",
+        "color",
+        "date",
+        "hidden",
+        "integer",
+        "list",
+        "markdown",
+        "radio",
+        "range",
+        "revealer",
+        "section",
+        "select",
+        "table",
+        "tags",
+        "template",
+        "terms",
+        "text",
+        "textarea",
+        "time",
+        "toggle",
+        "users",
+        "video",
+        "yaml"
+      ]
+    },
+    "array": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "array"
+        },
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "assets"
+        }
+      }
+    },
+    "bard": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "bard"
+        }
+      }
+    },
+    "button_group": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "button_group"
+        }
+      }
+    },
+    "checkboxes": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "checkboxes"
+        }
+      }
+    },
+    "code": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "code"
+        }
+      }
+    },
+    "color": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "color"
+        }
+      }
+    },
+    "date": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "integer",
+          "description": "Show multiple months at one time, in columns and rows. Default: 1.",
+          "minimum": 1,
+          "default": 1
+        },
+        "earliest_date": {
+          "type": "string",
+          "format": "date",
+          "default": "1900-01-01",
+          "description": "Set the earliest selectable date in YYYY-MM-DD format."
+        },
+        "format": {
+          "type": "string",
+          "description": "How the date should be stored, using the PHP date format."
+        },
+        "full_width": {
+          "type": "boolean",
+          "description": "Enable to stretch the calendar out like Stretch Armstrong, using the maximum amount of available horizontal space. Default: false",
+          "default": false
+        },
+        "icon": {
+          "type": "string"
+        },
+        "inline": {
+          "type": "boolean",
+          "description": "Always show the calendar instead of the text input and dropdown UI. Default: false.",
+          "default": false
+        },
+        "mode": {
+          "type": "string",
+          "description": "Choose between single or range. Range mode disables the time picker. Default: single.",
+          "enum": [
+            "single",
+            "range"
+          ],
+          "default": "single"
+        },
+        "rows": {
+          "type": "integer",
+          "description": "Show multiple months at one time, in columns and rows. Default: 1.",
+          "minimum": 1,
+          "default": 1
+        },
+        "time_enabled": {
+          "type": "boolean",
+          "description": "Enable/disable the timepicker. Default: false.",
+          "default": false
+        },
+        "time_required": {
+          "type": "boolean",
+          "description": "Makes the time field visible and non-dismissible. Default: false.",
+          "default": false
+        },
+        "type": {
+          "type": "string",
+          "const": "date"
+        }
+      }
+    },
+    "hidden": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "hidden"
+        }
+      }
+    },
+    "integer": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "integer"
+        }
+      }
+    },
+    "list": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "list"
+        }
+      }
+    },
+    "markdown": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "markdown"
+        }
+      }
+    },
+    "radio": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "radio"
+        }
+      }
+    },
+    "range": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "range"
+        }
+      }
+    },
+    "revealer": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "revealer"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "section"
+        }
+      }
+    },
+    "select": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "select"
+        }
+      }
+    },
+    "table": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "table"
+        }
+      }
+    },
+    "tags": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "tags"
+        }
+      }
+    },
+    "template": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "template"
+        }
+      }
+    },
+    "terms": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "terms"
+        }
+      }
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "text"
+        }
+      }
+    },
+    "textarea": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "textarea"
+        }
+      }
+    },
+    "time": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "time"
+        }
+      }
+    },
+    "toggle": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "toggle"
+        }
+      }
+    },
+    "users": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "users"
+        }
+      }
+    },
+    "video": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "video"
+        }
+      }
+    },
+    "yaml": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "yaml"
+        }
+      }
+    },
+    "display": {
+      "type": "string"
+    },
+    "instructions": {
+      "type": "string",
+      "description": "Shown under the field's display label, like this very text. Markdown is supported."
+    },
+    "instructions_position": {
+      "type": "string",
+      "enum": [
+        "above",
+        "below"
+      ]
+    },
+    "listable": {
+      "oneOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string",
+          "pattern": "hidden"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of field aka the fieldtype.",
+      "$ref": "#/$defs/fieldTypes"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "localizable": {
+      "type": "boolean"
+    },
+    "validate": {
+      "description": "The validation rules for that field",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/ruleMin"
+          },
+          {
+            "$ref": "#/$defs/validationRules"
+          }
+        ],
+        "minItems": 1,
+        "uniqueItems": true
+      }
+    },
+    "ruleMin": {
+      "type": "string",
+      "pattern": "^((accepted|declined|exclude)_if:\\S+,\\S+|(after|before):[\\w\\d_-]+|(after|before)_or_equal:[\\w\\d_-]+|between:\\d+,\\d+|date_equals:[\\w\\d_-]+|date_format:[\\w\\d_-]+|different:\\S+|digits:\\d+|digits_between:\\d+,\\d+|ends_with:\\S+,\\S+|exclude_unless:\\S+,\\S+|exclude_without:\\S+|exists:\\S+,\\S+|[lg]t(e)?:\\S+|in:\\S+,\\S+|in_array:\\S+|(min|max):\\d+|mimetypes:\\S+|mimes:\\S+|multiple_of:\\d+|not_in:\\S+,\\S+|(not_)?regex:\\S+|prohibited_(if|unless):[\\S_]+,\\S+|prohibits:(\\S)+,(\\S)+|required_(if|unless):\\S+,\\d+|required_(with|with_all|without|without_all):\\S+,\\S+|same:\\S+|size:\\d+|starts_with:\\S+,\\S+|unique:\\S+,\\S+|unique_user_value:[\\{(collection|id|site)\\}]+)$"
+    },
+    "validationRules": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "active_url",
+        "required",
+        "alpha",
+        "alpha_dash",
+        "alpha_num",
+        "array",
+        "bail",
+        "boolean",
+        "confirmed",
+        "current_password",
+        "date",
+        "declined",
+        "dimensions",
+        "distinct",
+        "email",
+        "enum",
+        "exclude",
+        "file",
+        "filled",
+        "image",
+        "integer",
+        "ip",
+        "ipv4",
+        "ipv6",
+        "json",
+        "nullable",
+        "numeric",
+        "password",
+        "present",
+        "prohibited",
+        "string",
+        "timezone",
+        "url",
+        "uuid"
+      ]
+    }
+  }
+}
