@@ -126,6 +126,27 @@
       "properties": {
         "type": {
           "const": "assets"
+        },
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
         }
       }
     },
@@ -134,12 +155,54 @@
       "properties": {
         "type": {
           "const": "bard"
+        },
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
         }
       }
     },
     "button_group": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "button_group"
         }
@@ -148,6 +211,27 @@
     "checkboxes": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "checkboxes"
         }
@@ -156,6 +240,27 @@
     "code": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "code"
         }
@@ -164,6 +269,27 @@
     "color": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "color"
         }
@@ -172,6 +298,27 @@
     "date": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "columns": {
           "type": "integer",
           "description": "Show multiple months at one time, in columns and rows. Default: 1.",
@@ -235,6 +382,27 @@
     "hidden": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "hidden"
         }
@@ -243,6 +411,27 @@
     "integer": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "integer"
         }
@@ -251,6 +440,27 @@
     "list": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "list"
         }
@@ -259,6 +469,27 @@
     "markdown": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "markdown"
         }
@@ -267,6 +498,27 @@
     "radio": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "radio"
         }
@@ -275,6 +527,27 @@
     "range": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "range"
         }
@@ -283,6 +556,27 @@
     "revealer": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "revealer"
         }
@@ -291,6 +585,27 @@
     "section": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "section"
         }
@@ -299,6 +614,27 @@
     "select": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "select"
         }
@@ -307,6 +643,27 @@
     "table": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "table"
         }
@@ -315,6 +672,27 @@
     "tags": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "tags"
         }
@@ -323,6 +701,27 @@
     "template": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "template"
         }
@@ -331,6 +730,27 @@
     "terms": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "terms"
         }
@@ -339,6 +759,27 @@
     "text": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "text"
         }
@@ -347,6 +788,27 @@
     "textarea": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "textarea"
         }
@@ -355,6 +817,27 @@
     "time": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "time"
         }
@@ -363,6 +846,27 @@
     "toggle": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "toggle"
         }
@@ -371,6 +875,27 @@
     "users": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "users"
         }
@@ -379,6 +904,27 @@
     "video": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "video"
         }
@@ -387,6 +933,27 @@
     "yaml": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "yaml"
         }
