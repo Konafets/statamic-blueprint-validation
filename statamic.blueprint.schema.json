@@ -39,7 +39,7 @@
                 "properties": {
                   "handle": {
                     "type": "string",
-                    "description": "The handle"
+                    "description": "The field's template variable."
                   },
                   "config": {
                     "type": "object",
@@ -393,13 +393,15 @@
       }
     },
     "display": {
+      "description": "The label shown above the field.",
       "type": "string"
     },
     "instructions": {
-      "type": "string",
-      "description": "Shown under the field's display label, like this very text. Markdown is supported."
+      "description": "Shown under the field's display label, like this very text. Markdown is supported.",
+      "type": "string"
     },
     "instructions_position": {
+      "description": "Where the instructions should be positioned relative to the field. Options: Above or Below.",
       "type": "string",
       "enum": [
         "above",
@@ -407,6 +409,7 @@
       ]
     },
     "listable": {
+      "description": "Controls whether the field should be shown in control panel listings.",
       "oneOf": [
         {
           "type": "boolean"
@@ -418,9 +421,11 @@
       ]
     },
     "required": {
+      "description": "Control whether or not this field is required.\n\n",
       "type": "boolean"
     },
     "localizable": {
+      "description": "",
       "type": "boolean"
     },
     "validate": {
