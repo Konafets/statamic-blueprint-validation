@@ -1,8 +1,8 @@
 {
-  "title": "JSON schema for Statamics Blueprint",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
+  title: "A Statamic Blueprint JSON Schema",
     "sections"
   ],
   "properties": {
