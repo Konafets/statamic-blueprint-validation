@@ -1,48 +1,49 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "required": [
   title: "A Statamic Blueprint JSON Schema",
+  $schema: "http://json-schema.org/draft-07/schema#",
+  type: "object",
+  required: [
     "sections"
   ],
-  "properties": {
-    "title": {
-      "type": "string"
+  properties: {
+    title: {
+      type: "string"
     },
-    "sections": {
-      "title": "The Sections",
-      "description": "At its most basic, a blueprint has sections. A section has a handle, a display name, and an array of fields:",
-      "type": "object",
-      "minItems": 1,
-      "additionalProperties": false,
-      "patternProperties": {
+    sections: {
+      title: "The Sections",
+      description: "At its most basic, a blueprint has sections. A section has a handle, a display name, and an array of fields:",
+      type: "object",
+      minItems: 1,
+      additionalProperties: false,
+      patternProperties: {
         "^[A-Za-z]+$": {
-          "type": "object",
-          "description": "The handle (name) of a section. This one is on you.",
-          "required": [
+          type: "object",
+          description: "The handle (name) of a section. This one is on you.",
+          required: [
             "display",
             "fields"
           ],
-          "properties": {
-            "display": {
-              "type": "string",
-              "description": "The displayed text."
+          properties: {
+            display: {
+              type: "string",
+              description: "The displayed text."
             },
-            "fields": {
-              "type": "array",
-              "description": "Here you define the fields of this section.",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "handle": {
-                    "type": "string",
-                    "description": "The handle"
+            fields: {
+              type: "array",
+              description: "Here you define the fields of this section.",
+              items: {
+                type: "object",
+                required: ["handle"],
+                properties: {
+                  handle: {
+                    type: "string",
+                    description: "The handle"
                   },
-                  "config": {
-                    "type": "object",
-                    "properties": {
-                      "display": {
-                        "type": "string"
+                  config: {
+                    type: "object",
+                    properties: {
+                      display: {
+                        type: "string"
                       }
                     }
                   },
