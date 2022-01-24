@@ -64,6 +64,7 @@ sections:
           mode: single
           earliest_date: '1900-01-01T00:00:00.000Z'
           columns: 1
+          inline: false
           rows: 1
           format: 'Y-m-d'
       -
