@@ -181,6 +181,9 @@
         "type": {
           "const": "array"
         },
+        "mode": {
+          "type": "string",
+          "enum": ["dynamic", "keyed"]
         }
       }
     },
