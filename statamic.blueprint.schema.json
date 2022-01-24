@@ -31,6 +31,7 @@
             "fields": {
               "type": "array",
               "description": "Here you define the fields of this section.",
+              "uniqueItems": true,
               "items": {
                 "type": "object",
                 "required": [
