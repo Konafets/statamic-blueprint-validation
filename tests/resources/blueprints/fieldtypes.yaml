@@ -143,6 +143,8 @@ sections:
         handle: video
         field:
           type: video
+          placeholder: "A placeholder"
+          default: "https://www.youtube.com/watch?v=s9F5fhJQo34"
       -
         handle: yaml
         field:

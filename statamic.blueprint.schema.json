@@ -491,8 +491,16 @@
       "properties": {
         "type": {
           "const": "video"
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "default": {
+          "type": "string",
+          "format": "url"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "yaml": {
       "type": "object",
