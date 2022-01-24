@@ -184,6 +184,9 @@
         "mode": {
           "type": "string",
           "enum": ["dynamic", "keyed"]
+        },
+        "keys": {
+          "type": ["object", "array"]
         }
       }
     },
