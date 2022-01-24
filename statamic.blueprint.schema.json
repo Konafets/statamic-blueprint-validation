@@ -470,6 +470,10 @@
       "properties": {
         "type": {
           "const": "toggle"
+        },
+        "default": {
+          "type": "boolean",
+          "default": false
         }
       }
     },

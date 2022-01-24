@@ -131,6 +131,7 @@ sections:
         handle: toggle
         field:
           type: toggle
+          default: false
       -
         handle: users
         field:
