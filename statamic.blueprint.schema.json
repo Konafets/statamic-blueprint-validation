@@ -269,14 +269,22 @@
           "default": 1
         },
         "earliest_date": {
+          "oneOf": [
+            {
+              "format": "date"
+            },
+            {
+              "format": "date-time"
+            }
+          ],
           "type": "string",
-          "format": "date-time",
           "default": "1900-01-01",
           "description": "Set the earliest selectable date in YYYY-MM-DD format."
         },
         "format": {
           "type": "string",
-          "description": "How the date should be stored, using the PHP date format."
+          "description": "How the date should be stored, using the PHP date format. Default: 'Y-m-d' or 'Y-m-d H:m'",
+          "default": "'Y-m-d'"
         },
         "full_width": {
           "type": "boolean",
