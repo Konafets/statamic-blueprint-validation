@@ -53,36 +53,94 @@
                   "field": {
                     "description": "The definition of a single field.",
                     "anyOf": [
-                      { "$ref": "#/$defs/array" },
-                      { "$ref": "#/$defs/assets" },
-                      { "$ref": "#/$defs/bard" },
-                      { "$ref": "#/$defs/button_group" },
-                      { "$ref": "#/$defs/checkboxes" },
-                      { "$ref": "#/$defs/code" },
-                      { "$ref": "#/$defs/color" },
-                      { "$ref": "#/$defs/date" },
-                      { "$ref": "#/$defs/hidden" },
-                      { "$ref": "#/$defs/integer" },
-                      { "$ref": "#/$defs/list" },
-                      { "$ref": "#/$defs/markdown" },
-                      { "$ref": "#/$defs/radio" },
-                      { "$ref": "#/$defs/range" },
-                      { "$ref": "#/$defs/revealer" },
-                      { "$ref": "#/$defs/section" },
-                      { "$ref": "#/$defs/select" },
-                      { "$ref": "#/$defs/table" },
-                      { "$ref": "#/$defs/tags" },
-                      { "$ref": "#/$defs/template" },
-                      { "$ref": "#/$defs/terms" },
-                      { "$ref": "#/$defs/text" },
-                      { "$ref": "#/$defs/textarea" },
-                      { "$ref": "#/$defs/time" },
-                      { "$ref": "#/$defs/toggle" },
-                      { "$ref": "#/$defs/users" },
-                      { "$ref": "#/$defs/video" },
-                      { "$ref": "#/$defs/yaml" }
+                      {
+                        "$ref": "#/$defs/array"
+                      },
+                      {
+                        "$ref": "#/$defs/assets"
+                      },
+                      {
+                        "$ref": "#/$defs/bard"
+                      },
+                      {
+                        "$ref": "#/$defs/button_group"
+                      },
+                      {
+                        "$ref": "#/$defs/checkboxes"
+                      },
+                      {
+                        "$ref": "#/$defs/code"
+                      },
+                      {
+                        "$ref": "#/$defs/color"
+                      },
+                      {
+                        "$ref": "#/$defs/date"
+                      },
+                      {
+                        "$ref": "#/$defs/hidden"
+                      },
+                      {
+                        "$ref": "#/$defs/integer"
+                      },
+                      {
+                        "$ref": "#/$defs/list"
+                      },
+                      {
+                        "$ref": "#/$defs/markdown"
+                      },
+                      {
+                        "$ref": "#/$defs/radio"
+                      },
+                      {
+                        "$ref": "#/$defs/range"
+                      },
+                      {
+                        "$ref": "#/$defs/revealer"
+                      },
+                      {
+                        "$ref": "#/$defs/section"
+                      },
+                      {
+                        "$ref": "#/$defs/select"
+                      },
+                      {
+                        "$ref": "#/$defs/table"
+                      },
+                      {
+                        "$ref": "#/$defs/tags"
+                      },
+                      {
+                        "$ref": "#/$defs/template"
+                      },
+                      {
+                        "$ref": "#/$defs/terms"
+                      },
+                      {
+                        "$ref": "#/$defs/text"
+                      },
+                      {
+                        "$ref": "#/$defs/textarea"
+                      },
+                      {
+                        "$ref": "#/$defs/time"
+                      },
+                      {
+                        "$ref": "#/$defs/toggle"
+                      },
+                      {
+                        "$ref": "#/$defs/users"
+                      },
+                      {
+                        "$ref": "#/$defs/video"
+                      },
+                      {
+                        "$ref": "#/$defs/yaml"
+                      }
                     ],
-                    "required": ["type"]
+                    "required": [
+                      "type"
+                    ]
                   }
                 }
               }
