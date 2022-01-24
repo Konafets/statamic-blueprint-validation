@@ -131,6 +131,7 @@ sections:
         handle: time
         field:
           type: time
+          default: '12:00'
       -
         handle: toggle
         field:
