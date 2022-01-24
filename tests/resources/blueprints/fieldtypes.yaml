@@ -16,7 +16,8 @@ sections:
         field:
           type: array
           mode: keyed
-          value_header: Foo
+          value_header: "Custom header for value column"
+          key_header: "Custom header for key column"
           keys:
             - street
             - city

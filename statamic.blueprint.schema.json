@@ -187,8 +187,15 @@
         },
         "keys": {
           "type": ["object", "array"]
+        },
+        "value_header": {
+          "type": "string"
+        },
+        "key_header": {
+          "type": "string"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "assets": {
       "type": "object",
