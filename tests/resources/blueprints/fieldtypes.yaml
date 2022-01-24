@@ -7,6 +7,7 @@ sections:
         field:
           type: array
           mode: keyed
+          icon: array
           keys:
             street: Street
             city: City

@@ -57,6 +57,9 @@
                       "display": {
                         "$ref": "#/$defs/display"
                       },
+                      "icon": {
+                        "$ref": "#/$defs/icon"
+                      },
                       "instructions": {
                         "$ref": "#/$defs/instructions"
                       },
@@ -503,6 +506,10 @@
     },
     "display": {
       "description": "The label shown above the field.",
+      "type": "string"
+    },
+    "icon": {
+      "description": "The icon",
       "type": "string"
     },
     "instructions": {
