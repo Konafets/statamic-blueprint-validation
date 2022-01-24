@@ -137,10 +137,22 @@ sections:
           type: toggle
           default: false
       -
+        handle: user_group
+        field:
+          type: user_groups
+          mode: typeahead
+          max_items:
+      -
+        handle: user_roles
+        field:
+          type: user_roles
+          mode: typeahead
+          max_items:
+      -
         handle: users
         field:
           type: users
-          mode: select
+          mode: typeahead
           max_items:
           default: current
       -

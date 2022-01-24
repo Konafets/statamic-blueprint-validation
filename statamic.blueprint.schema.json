@@ -130,6 +130,12 @@
                         "$ref": "#/$defs/toggle"
                       },
                       {
+                        "$ref": "#/$defs/user_groups"
+                      },
+                      {
+                        "$ref": "#/$defs/user_roles"
+                      },
+                      {
                         "$ref": "#/$defs/users"
                       },
                       {
@@ -478,6 +484,38 @@
         }
       }
     },
+    "user_groups": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "user_groups"
+        },
+        "max_items": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "default": null
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
+        }
+      }
+    },
+    "user_roles": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "user_roles"
+        },
+        "max_items": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "default": null
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
+        }
+      }
+    },
     "users": {
       "type": "object",
       "properties": {
@@ -490,12 +528,7 @@
           "default": null
         },
         "mode": {
-          "type": "string",
-          "enum": [
-            "default",
-            "select",
-            "typeahead"
-          ]
+          "$ref": "#/$defs/userSelectModes"
         },
         "default": {
           "type": "string",
@@ -625,6 +658,14 @@
         "timezone",
         "url",
         "uuid"
+      ]
+    },
+    "userSelectModes": {
+      "type": "string",
+      "enum": [
+        "default",
+        "select",
+        "typeahead"
       ]
     }
   }
