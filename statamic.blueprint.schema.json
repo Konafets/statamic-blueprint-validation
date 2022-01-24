@@ -461,6 +461,19 @@
       "properties": {
         "type": {
           "const": "textarea"
+        },
+        "placeholder": {
+          "type": "string"
+        },
+        "character_limit": {
+          "type": ["integer", "string"]
+        },
+        "antlers": {
+          "type": "boolean",
+          "default": false
+        },
+        "default": {
+          "type": "string"
         }
       }
     },
