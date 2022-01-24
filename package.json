@@ -1,0 +1,32 @@
+{
+  "name": "statamic-blueprint-schema",
+  "version": "1.0.0",
+  "description": "A Statamic Blueprint Schema",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "validate": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Konafets/statamic-blueprint-validation.git"
+  },
+  "keywords": [
+    "statamic"
+  ],
+  "author": "Stefano Kowalke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Konafets/statamic-blueprint-validation/issues"
+  },
+  "homepage": "https://github.com/Konafets/statamic-blueprint-validation#readme",
+  "dependencies": {
+    "ajv": "^8.9.0",
+    "ajv-formats": "^2.1.1",
+    "fs": "0.0.1-security",
+    "js-yaml": "^4.1.0"
+  }
+}

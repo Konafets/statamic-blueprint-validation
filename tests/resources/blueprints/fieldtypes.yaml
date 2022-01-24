@@ -1,0 +1,138 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: array_keyed_object
+        field:
+          type: array
+          mode: keyed
+          keys:
+            street: Street
+            city: City
+            country: Country
+      -
+        handle: array_keyed_numbered_object
+        field:
+          type: array
+          mode: keyed
+          value_header: Foo
+          keys:
+            - street
+            - city
+            - country
+      -
+        handle: array_dynamic
+        field:
+          type: array
+          mode: dynamic
+          value_header: Type of Bacon
+          key_header: Why is it awesome?
+      -
+        handle: assets
+        field:
+          type: assets
+      -
+        handle: bard
+        field:
+          type: bard
+      -
+        handle: button_group
+        field:
+          type: button_group
+      -
+        handle: checkboxes
+        field:
+          type: checkboxes
+      -
+        handle: code
+        field:
+          type: code
+      -
+        handle: color
+        field:
+          type: color
+      -
+        handle: date
+        field:
+          type: date
+      -
+        handle: hidden
+        field:
+          type: hidden
+      -
+        handle: integer
+        field:
+          type: integer
+      -
+        handle: list
+        field:
+          type: list
+      -
+        handle: markdown
+        field:
+          type: markdown
+      -
+        handle: radio
+        field:
+          type: radio
+      -
+        handle: range
+        field:
+          type: range
+      -
+        handle: revealer
+        field:
+          type: revealer
+      -
+        handle: section
+        field:
+          type: section
+      -
+        handle: select
+        field:
+          type: select
+      -
+        handle: table
+        field:
+          type: table
+      -
+        handle: tags
+        field:
+          type: tags
+      -
+        handle: template
+        field:
+          type: template
+      -
+        handle: terms
+        field:
+          type: terms
+      -
+        handle: text
+        field:
+          type: text
+      -
+        handle: textarea
+        field:
+          type: textarea
+      -
+        handle: time
+        field:
+          type: time
+      -
+        handle: toggle
+        field:
+          type: toggle
+      -
+        handle: users
+        field:
+          type: users
+      -
+        handle: video
+        field:
+          type: video
+      -
+        handle: yaml
+        field:
+          type: yaml
