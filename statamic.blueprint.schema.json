@@ -53,32 +53,6 @@
                   "field": {
                     "description": "The definition of a single field.",
                     "type": "object",
-                    "properties": {
-                      "display": {
-                        "$ref": "#/$defs/display"
-                      },
-                      "icon": {
-                        "$ref": "#/$defs/icon"
-                      },
-                      "instructions": {
-                        "$ref": "#/$defs/instructions"
-                      },
-                      "instructions_position": {
-                        "$ref": "#/$defs/instructions_position"
-                      },
-                      "listable": {
-                        "$ref": "#/$defs/listable"
-                      },
-                      "required": {
-                        "$ref": "#/$defs/required"
-                      },
-                      "localizable": {
-                        "$ref": "#/$defs/localizable"
-                      },
-                      "validate": {
-                        "$ref": "#/$defs/validate"
-                      }
-                    },
                     "anyOf": [
                       {
                         "$ref": "#/$defs/array"
@@ -181,6 +155,30 @@
     "array": {
       "type": "object",
       "properties": {
+        "display": {
+          "$ref": "#/$defs/display"
+        },
+        "icon": {
+          "$ref": "#/$defs/icon"
+        },
+        "instructions": {
+          "$ref": "#/$defs/instructions"
+        },
+        "instructions_position": {
+          "$ref": "#/$defs/instructions_position"
+        },
+        "listable": {
+          "$ref": "#/$defs/listable"
+        },
+        "required": {
+          "$ref": "#/$defs/required"
+        },
+        "localizable": {
+          "$ref": "#/$defs/localizable"
+        },
+        "validate": {
+          "$ref": "#/$defs/validate"
+        },
         "type": {
           "const": "array"
         },

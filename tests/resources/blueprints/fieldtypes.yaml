@@ -6,6 +6,7 @@ sections:
         handle: array_keyed_object
         field:
           type: array
+          display: Foo
           mode: keyed
           icon: array
           keys:
@@ -38,6 +39,7 @@ sections:
         handle: bard
         field:
           type: bard
+          icon: Foo
       -
         handle: button_group
         field:
