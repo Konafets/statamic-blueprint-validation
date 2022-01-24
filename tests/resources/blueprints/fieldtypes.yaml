@@ -139,6 +139,9 @@ sections:
         handle: users
         field:
           type: users
+          mode: select
+          max_items:
+          default: current
       -
         handle: video
         field:

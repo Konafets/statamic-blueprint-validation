@@ -483,6 +483,23 @@
       "properties": {
         "type": {
           "const": "users"
+        },
+        "max_items": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "default": null
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "default",
+            "select",
+            "typeahead"
+          ]
+        },
+        "default": {
+          "type": "string",
+          "const": "current"
         }
       }
     },
