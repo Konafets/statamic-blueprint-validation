@@ -264,7 +264,7 @@
         },
         "earliest_date": {
           "type": "string",
-          "format": "date",
+          "format": "date-time",
           "default": "1900-01-01",
           "description": "Set the earliest selectable date in YYYY-MM-DD format."
         },
