@@ -104,6 +104,12 @@ sections:
         field:
           type: select
       -
+        handle: structures
+        field:
+          type: structures
+          max_items: 10
+          mode: default
+      -
         handle: table
         field:
           type: table

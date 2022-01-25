@@ -106,6 +106,9 @@
                         "$ref": "#/$defs/select"
                       },
                       {
+                        "$ref": "#/$defs/structures"
+                      },
+                      {
                         "$ref": "#/$defs/table"
                       },
                       {
@@ -419,6 +422,20 @@
         }
       }
     },
+    "structures": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "structures"
+        },
+        "max_items": {
+          "$ref": "#/$defs/max_items"
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
+        }
+      }
+    },
     "table": {
       "type": "object",
       "properties": {
@@ -445,8 +462,7 @@
           "const": "taxonomies"
         },
         "max_items": {
-          "type": "integer",
-          "minimum": 1
+          "$ref": "#/$defs/max_items"
         },
         "mode": {
           "$ref": "#/$defs/userSelectModes"
@@ -472,8 +488,7 @@
           "const": "terms"
         },
         "max_items": {
-          "type": "integer",
-          "minimum": 1
+          "$ref": "#/$defs/max_items"
         },
         "mode": {
           "$ref": "#/$defs/userSelectModes"
@@ -767,6 +782,10 @@
     "antlers": {
       "type": "boolean",
       "default": false
+    },
+    "max_items": {
+      "type": "integer",
+      "minimum": 1
     }
   }
 }
