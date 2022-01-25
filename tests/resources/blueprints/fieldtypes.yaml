@@ -103,6 +103,19 @@ sections:
         handle: select
         field:
           type: select
+          placeholder: "Foo"
+          options:
+            face: "So's your face."
+            know: "I know you are, but what am I?"
+            hand: "Talk to the hand."
+            beeswax: "Mind your own beeswax."
+          clearable: false
+          default: "1"
+          multiple: false
+          searchable: true
+          taggable: false
+          cast_booleans: true
+          push_tags: false
       -
         handle: sites
         field:

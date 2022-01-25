@@ -425,8 +425,46 @@
       "properties": {
         "type": {
           "const": "select"
+        },
+        "clearable": {
+          "description": "Allow deselecting any chosen option and making null a possible value. Default: false.",
+          "type": "boolean",
+          "default": false
+        },
+        "options": {
+          "description": "A set of key/value pairs that define the values and labels. If you don't define the keys, the value and label will be the same.\n\n",
+          "type": ["array", "object"]
+        },
+        "placeholder": {
+          "description": "Set the non-selectable placeholder text. Default: none.",
+          "$ref": "#/$defs/placeholder"
+        },
+        "default": {
+          "description": "Set the default option key. Default: none.",
+          "type": "string"
+        },
+        "multiple": {
+          "description": "Allow multiple selections. Default: false.",
+          "type": "boolean",
+          "default": false
+        },
+        "searchable": {
+          "description": "Enable search with suggestions by typing in the select box. Default: true.",
+          "type": "boolean",
+          "default": true
+        },
+        "taggable": {
+          "description": "Use a \"tag\" style UI when selecting multiples. Default: false.",
+          "type": "boolean",
+          "default": false
+        },
+        "push_tags": {
+          "description": "Add newly created options to the list. Default: false.",
+          "type": "boolean",
+          "default": false
         }
-      }
+      },
+      "required": ["options"]
     },
     "sites": {
       "type": "object",
