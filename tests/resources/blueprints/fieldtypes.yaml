@@ -182,3 +182,4 @@ sections:
         handle: yaml
         field:
           type: yaml
+          default: '42'

@@ -622,6 +622,9 @@
       "properties": {
         "type": {
           "const": "yaml"
+        },
+        "default": {
+          "type": ["object", "string"]
         }
       }
     },
