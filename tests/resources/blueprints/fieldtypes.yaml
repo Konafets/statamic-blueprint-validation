@@ -104,6 +104,11 @@ sections:
         field:
           type: select
       -
+        handle: slug
+        field:
+          type: slug
+          generate: true
+      -
         handle: structures
         field:
           type: structures

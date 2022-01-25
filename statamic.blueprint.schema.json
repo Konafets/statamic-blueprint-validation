@@ -106,6 +106,9 @@
                         "$ref": "#/$defs/select"
                       },
                       {
+                        "$ref": "#/$defs/slug"
+                      },
+                      {
                         "$ref": "#/$defs/structures"
                       },
                       {
@@ -419,6 +422,18 @@
       "properties": {
         "type": {
           "const": "select"
+        }
+      }
+    },
+    "slug": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "slug"
+        },
+        "generate": {
+          "type": "boolean",
+          "default": true
         }
       }
     },
