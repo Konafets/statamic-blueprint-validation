@@ -437,6 +437,10 @@
       "properties": {
         "type": {
           "const": "template"
+        },
+        "hide_partials": {
+          "type": "boolean",
+          "default": true
         }
       }
     },

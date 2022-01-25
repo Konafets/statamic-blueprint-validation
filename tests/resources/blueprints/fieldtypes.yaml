@@ -115,6 +115,7 @@ sections:
         handle: template
         field:
           type: template
+          hide_partials: true
       -
         handle: taxonomy_terms
         field:
