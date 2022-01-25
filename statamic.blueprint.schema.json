@@ -106,6 +106,9 @@
                         "$ref": "#/$defs/select"
                       },
                       {
+                        "$ref": "#/$defs/sites"
+                      },
+                      {
                         "$ref": "#/$defs/slug"
                       },
                       {
@@ -422,6 +425,20 @@
       "properties": {
         "type": {
           "const": "select"
+        }
+      }
+    },
+    "sites": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "sites"
+        },
+        "max_items": {
+          "$ref": "#/$defs/max_items"
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
         }
       }
     },

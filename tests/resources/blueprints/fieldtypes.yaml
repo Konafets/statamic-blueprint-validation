@@ -104,6 +104,12 @@ sections:
         field:
           type: select
       -
+        handle: sites
+        field:
+          type: sites
+          max_items: 1
+          mode: typeahead
+      -
         handle: slug
         field:
           type: slug
