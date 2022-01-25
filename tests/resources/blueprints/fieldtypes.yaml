@@ -108,9 +108,16 @@ sections:
         field:
           type: table
       -
-        handle: tags
+        handle: taggable
         field:
-          type: tags
+          type: taggable
+          placeholder: Platzhalter
+      -
+        handle: taxonomies
+        field:
+          type: taxonomies
+          max_items: 10
+          mode: typeahead
       -
         handle: template
         field:

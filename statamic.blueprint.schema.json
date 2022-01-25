@@ -109,7 +109,10 @@
                         "$ref": "#/$defs/table"
                       },
                       {
-                        "$ref": "#/$defs/tags"
+                        "$ref": "#/$defs/taxonomies"
+                      },
+                      {
+                        "$ref": "#/$defs/taggable"
                       },
                       {
                         "$ref": "#/$defs/template"
@@ -424,11 +427,29 @@
         }
       }
     },
-    "tags": {
+    "taggable": {
       "type": "object",
       "properties": {
         "type": {
-          "const": "tags"
+          "const": "taggable"
+        },
+        "placeholder": {
+          "$ref": "#/$defs/placeholder"
+        }
+      }
+    },
+    "taxonomies": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "taxonomies"
+        },
+        "max_items": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
         }
       }
     },
