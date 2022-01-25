@@ -445,6 +445,19 @@
       "properties": {
         "type": {
           "const": "terms"
+        },
+        "max_items": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
+        },
+        "create": {
+          "type": "boolean"
+        },
+        "taxonomies": {
+          "type": "array"
         }
       }
     },

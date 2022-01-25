@@ -116,9 +116,14 @@ sections:
         field:
           type: template
       -
-        handle: terms
+        handle: taxonomy_terms
         field:
           type: terms
+          max_items: 7
+          mode: select
+          create: false
+          taxonomies:
+            - categories
       -
         handle: text
         field:
