@@ -453,6 +453,42 @@
       "properties": {
         "type": {
           "const": "text"
+        },
+        "placeholder": {
+          "$ref": "#/$defs/placeholder"
+        },
+        "input_type": {
+          "type": "string",
+          "default": "text",
+          "enum": [
+            "color",
+            "date",
+            "email",
+            "hidden",
+            "month",
+            "number",
+            "password",
+            "tel",
+            "text",
+            "time",
+            "url",
+            "week"
+          ]
+        },
+        "character_limit": {
+          "type": ["integer"]
+        },
+        "antlers": {
+          "$ref": "#/$defs/antlers"
+        },
+        "default": {
+          "type": "string"
+        },
+        "append": {
+          "type": "string"
+        },
+        "prepend": {
+          "type": "string"
         }
       }
     },
@@ -463,14 +499,13 @@
           "const": "textarea"
         },
         "placeholder": {
-          "type": "string"
+          "$ref": "#/$defs/placeholder"
         },
         "character_limit": {
           "type": ["integer", "string"]
         },
         "antlers": {
-          "type": "boolean",
-          "default": false
+          "$ref": "#/$defs/antlers"
         },
         "default": {
           "type": "string"
@@ -560,7 +595,7 @@
           "const": "video"
         },
         "placeholder": {
-          "type": "string"
+          "$ref": "#/$defs/placeholder"
         },
         "default": {
           "type": "string",
@@ -684,6 +719,13 @@
         "select",
         "typeahead"
       ]
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "antlers": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
