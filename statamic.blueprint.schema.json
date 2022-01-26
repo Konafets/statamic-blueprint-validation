@@ -97,6 +97,9 @@
                         "$ref": "#/$defs/range"
                       },
                       {
+                        "$ref": "#/$defs/replicator"
+                      },
+                      {
                         "$ref": "#/$defs/revealer"
                       },
                       {
@@ -401,6 +404,14 @@
       "properties": {
         "type": {
           "const": "range"
+        }
+      }
+    },
+    "replicator": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "replicator"
         }
       }
     },

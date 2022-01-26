@@ -92,6 +92,10 @@ sections:
         field:
           type: range
       -
+        handle: replicator
+        field:
+          type: replicator
+      -
         handle: revealed
         field:
           type: text
