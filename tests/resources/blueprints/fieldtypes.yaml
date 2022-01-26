@@ -56,6 +56,14 @@ sections:
         handle: color
         field:
           type: color
+          swatches:
+            - green
+            - blue
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - hex
       -
         handle: form
         field:

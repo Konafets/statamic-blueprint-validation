@@ -297,6 +297,51 @@
       "properties": {
         "type": {
           "const": "color"
+        },
+        "swatches": {
+          "description": "Pre-define colors that can be selected from a list. Supports all color mode formats.",
+          "type": "array"
+        },
+        "theme": {
+          "description": "Choose between a classic and a simpler nano (mini) theme. Default: classic.",
+          "type": "string",
+          "enum": [
+            "classic",
+            "nano"
+          ]
+        },
+        "lock_opacity": {
+          "description": "Disables the alpha slider, preventing adjustments to opacity.",
+          "type": "boolean",
+          "default": false
+        },
+        "default_color_mode": {
+          "description": "Set which color mode you wish to be the default. Default: hex.",
+          "type": "string",
+          "default": "HEXA",
+          "enum": [
+            "HEXA",
+            "RGBA",
+            "HSLA",
+            "HSVA",
+            "CMYK"
+          ]
+        },
+        "color_modes": {
+          "description": "Choose which color modes you want to enable in the UI. Available choices: hex, rgba, hsla, hsva, and cmyk. Default: hex.",
+          "type": "array",
+          "uniqueItems": true,
+          "default": "hex",
+          "items": {
+            "type": "string",
+            "enum": [
+              "hex",
+              "rgba",
+              "hsla",
+              "hsva",
+              "cmyk"
+            ]
+          }
         }
       }
     },
