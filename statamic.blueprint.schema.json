@@ -405,6 +405,7 @@
       }
     },
     "revealer": {
+      "description": "The revealer is a simple button that reveals conditional fields without saving any additional data.",
       "type": "object",
       "properties": {
         "type": {
