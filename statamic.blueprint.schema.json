@@ -292,6 +292,78 @@
       "properties": {
         "type": {
           "const": "code"
+        },
+        "theme": {
+          "description": "Choose your preferred theme.",
+          "type": "string",
+          "enum": [
+            "light",
+            "material"
+          ]
+        },
+        "mode": {
+          "description": "Choose language for syntax highlighting.",
+          "type": "string",
+          "enum": [
+            "clike",
+            "css",
+            "diff",
+            "go",
+            "haml",
+            "handlebars",
+            "htmlmixed",
+            "less",
+            "markdown",
+            "gfm",
+            "nginx",
+            "text/x-java",
+            "javascript",
+            "jsx",
+            "text/x-objectivec",
+            "php",
+            "python",
+            "ruby",
+            "scss",
+            "shell",
+            "sql",
+            "twig",
+            "vue",
+            "xml",
+            "yaml-frontmatter"
+          ]
+        },
+        "indent_type": {
+          "description": "Set your preferred type of indentation.",
+          "type": "string",
+          "enum": [
+            "tabs",
+            "spaces"
+          ]
+        },
+        "indent_size": {
+          "description": "Set your preferred indentation size (in spaces).",
+          "type": "integer",
+          "default": 4
+        },
+        "key_map": {
+          "description": "Choose preferred set of keyboard shortcuts.",
+          "type": "string",
+          "default": "default",
+          "enum": [
+            "default",
+            "sublime",
+            "vim"
+          ]
+        },
+        "line_numbers": {
+          "description": "Show Line Numbers",
+          "type": "boolean",
+          "default": true
+        },
+        "line_wrapping": {
+          "description": "Enable Line Wrapping",
+          "type": "boolean",
+          "default": true
         }
       }
     },
