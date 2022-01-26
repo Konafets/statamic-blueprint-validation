@@ -325,7 +325,7 @@
           "description": "A list of fields, each of which create their own column.",
           "type": "array",
           "items": {
-            "type": "objects"
+            "type": "object"
           }
         },
         "mode": {
