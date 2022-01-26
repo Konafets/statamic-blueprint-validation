@@ -85,6 +85,9 @@
                         "$ref": "#/$defs/integer"
                       },
                       {
+                        "$ref": "#/$defs/link"
+                      },
+                      {
                         "$ref": "#/$defs/list"
                       },
                       {
@@ -372,6 +375,17 @@
       "properties": {
         "type": {
           "const": "integer"
+        }
+      }
+    },
+    "link": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "link"
+        },
+        "collections": {
+          "type": "array"
         }
       }
     },

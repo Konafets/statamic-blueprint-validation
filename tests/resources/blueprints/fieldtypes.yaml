@@ -76,6 +76,12 @@ sections:
         field:
           type: integer
       -
+        handle: link
+        field:
+          type: link
+          collections:
+            - extending-docs
+      -
         handle: list
         field:
           type: list
