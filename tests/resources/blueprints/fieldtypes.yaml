@@ -79,6 +79,10 @@ sections:
         handle: list
         field:
           type: list
+          default:
+            - 'Knife-Wrench (for kids!)'
+            - Kite-Fork
+            - 'Apple-Cranberry hybrid (calling it Appleberry™)'
       -
         handle: markdown
         field:

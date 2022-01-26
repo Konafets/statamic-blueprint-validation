@@ -380,6 +380,9 @@
       "properties": {
         "type": {
           "const": "list"
+        },
+        "default": {
+          "type": "array"
         }
       }
     },
