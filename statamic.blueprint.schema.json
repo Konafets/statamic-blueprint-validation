@@ -404,6 +404,27 @@
       "properties": {
         "type": {
           "const": "range"
+        },
+        "step": {
+          "description": "The minimum size between values.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "min": {
+          "description": "The minimum, left-most value.",
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        },
+        "max": {
+          "description": "The maximum, right-most value.",
+          "type": "integer",
+          "default": 100
+        },
+        "default": {
+          "description": "Set the default value.",
+          "type": "integer"
         }
       }
     },

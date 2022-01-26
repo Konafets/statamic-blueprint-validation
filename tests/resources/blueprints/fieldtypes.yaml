@@ -91,6 +91,12 @@ sections:
         handle: range
         field:
           type: range
+          step: 1
+          min: 0
+          max: 100
+          default: 42
+          prepend: Prepend
+          append: Append
       -
         handle: replicator
         field:
