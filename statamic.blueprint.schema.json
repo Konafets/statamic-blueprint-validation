@@ -388,6 +388,42 @@
       "properties": {
         "type": {
           "const": "markdown"
+        },
+        "container": {
+          "description": "Set the name of an asset container to enable browsing, uploading, and inserting assets.",
+          "type": "string"
+        },
+        "restrict": {
+          "description": "If true, navigation within the asset browser will be disabled. Your users will be restricted to specified the container and folder. Default: false.",
+          "type": "boolean",
+          "default": false
+        },
+        "automatic_line_breaks": {
+          "description": "Automatically convert line breaks to <br> tags. Default: true.",
+          "type": "boolean",
+          "default": true
+        },
+        "automatic_links": {
+          "description": "Automatically links any URLs in the text. Default: false.",
+          "type": "boolean",
+          "default": false
+        },
+        "escape_markup": {
+          "description": "Escapes inline HTML markup. For example, <div> will be replaced with &lt;div&gt;. Default: true.",
+          "type": "boolean",
+          "default": false
+        },
+        "smartypants": {
+          "description": "Automatically convert straight quotes into curly quotes, dashes into en/em-dashes, and other similar text transformations. Default: false.",
+          "type": "boolean",
+          "default": false
+        },
+        "antlers": {
+          "$ref": "#/$defs/antlers"
+        },
+        "default": {
+          "description": "Set the default value.",
+          "type": "string"
         }
       }
     },
@@ -896,6 +932,7 @@
       "type": "string"
     },
     "antlers": {
+      "description": "Enable Antlers parsing in this field's content.",
       "type": "boolean",
       "default": false
     },
