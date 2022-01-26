@@ -396,6 +396,19 @@
       "properties": {
         "type": {
           "const": "radio"
+        },
+        "options": {
+          "description": "Sets of key/value pairs define the values and labels of the radio options.",
+          "type": ["object", "array"]
+        },
+        "inline": {
+          "description": "Show the radio buttons next to each other in a row instead of stacked vertically. Default: false",
+          "type": "boolean",
+          "default": false
+        },
+        "cast_booleans": {
+          "type": "boolean",
+          "default": false
         }
       }
     },

@@ -87,6 +87,11 @@ sections:
         handle: radio
         field:
           type: radio
+          options:
+            Fruits: Apple
+            Vehicle: Boat
+          inline: false
+          cast_booleans: false
       -
         handle: range
         field:
