@@ -73,6 +73,9 @@
                         "$ref": "#/$defs/code"
                       },
                       {
+                        "$ref": "#/$defs/collections"
+                      },
+                      {
                         "$ref": "#/$defs/color"
                       },
                       {
@@ -289,6 +292,23 @@
       "properties": {
         "type": {
           "const": "code"
+        }
+      }
+    },
+    "collections": {
+      "description": "This fieldtype is used to view and select from a list of Collections.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "collections"
+        },
+        "max_items": {
+          "description": "Set a maximum number of selectable items.",
+          "type": "integer"
+        },
+        "mode": {
+          "description": "Choose your preferred UI style.",
+          "$ref": "#/$defs/userSelectModes"
         }
       }
     },

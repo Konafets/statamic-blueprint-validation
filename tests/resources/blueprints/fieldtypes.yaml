@@ -53,6 +53,12 @@ sections:
         field:
           type: code
       -
+        handle: collections
+        field:
+          type: collections
+          max_items: -1
+          mode: select
+      -
         handle: color
         field:
           type: color
