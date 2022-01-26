@@ -370,6 +370,9 @@
       "properties": {
         "type": {
           "const": "hidden"
+        },
+        "default": {
+          "type": "string"
         }
       }
     },

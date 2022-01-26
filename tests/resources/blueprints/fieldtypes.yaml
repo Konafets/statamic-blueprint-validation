@@ -71,6 +71,7 @@ sections:
         handle: hidden
         field:
           type: hidden
+          default: 'A default string'
       -
         handle: html
         field:
