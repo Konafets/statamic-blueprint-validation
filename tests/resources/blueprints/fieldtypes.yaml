@@ -57,6 +57,24 @@ sections:
         field:
           type: color
       -
+        handle: form
+        field:
+          type: form
+          placeholder: Lorem ipsum dolor med
+          max_items: 1
+      -
+        handle: grid
+        field:
+          type: grid
+          fields:
+            - handle: alt_nav_title
+              field: page.nav_title
+          mode: table
+          max_rows: 10
+          min_rows: 0
+          add_row: 'Neue Zeile'
+          reorderable: true
+      -
         handle: date
         field:
           type: date

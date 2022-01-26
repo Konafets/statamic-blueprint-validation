@@ -76,6 +76,12 @@
                         "$ref": "#/$defs/color"
                       },
                       {
+                        "$ref": "#/$defs/form"
+                      },
+                      {
+                        "$ref": "#/$defs/grid"
+                      },
+                      {
                         "$ref": "#/$defs/date"
                       },
                       {
@@ -291,6 +297,64 @@
       "properties": {
         "type": {
           "const": "color"
+        }
+      }
+    },
+    "form": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "form"
+        },
+        "placeholder": {
+          "$ref": "#/$defs/placeholder"
+        },
+        "max_items": {
+          "type": "integer",
+          "default": 1
+        }
+      }
+    },
+    "grid": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "grid"
+        },
+        "fields": {
+          "description": "A list of fields, each of which create their own column.",
+          "type": "array",
+          "items": {
+            "type": "objects"
+          }
+        },
+        "mode": {
+          "description": "The Grid is displayed as a table by default. If you have a large number of columns it can get pretty crowded. Choose stacked mode to group rows similar to Replicator. When Sneak Peek is enabled, Grids automatically toggle into stacked mode.",
+          "type": "string",
+          "enum": [
+            "table",
+            "stacked"
+          ]
+        },
+        "min_rows": {
+          "description": "The minimum number of required rows.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_rows": {
+          "description": "The maximum number of rows allowed. Once reached the Add Row button will disappear.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "add_row": {
+          "description": "The Add Row button's label.",
+          "type": "string",
+          "minimum": 1
+        },
+        "reorderable": {
+          "description": "The minimum number of required rows.",
+          "type": "boolean",
+          "default": true
         }
       }
     },
