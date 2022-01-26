@@ -72,9 +72,15 @@ sections:
         field:
           type: hidden
       -
+        handle: html
+        field:
+          type: html
+          html: '<html><head></head><body></body></html>'
+      -
         handle: integer
         field:
           type: integer
+          default: '42'
       -
         handle: link
         field:

@@ -82,6 +82,9 @@
                         "$ref": "#/$defs/hidden"
                       },
                       {
+                        "$ref": "#/$defs/html"
+                      },
+                      {
                         "$ref": "#/$defs/integer"
                       },
                       {
@@ -370,11 +373,26 @@
         }
       }
     },
+    "html": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "html"
+        },
+        "html": {
+          "description": "Store whatever HTML you want — it's up to you.",
+          "type": ["string"]
+        }
+      }
+    },
     "integer": {
       "type": "object",
       "properties": {
         "type": {
           "const": "integer"
+        },
+        "default": {
+          "type": ["string", "integer"]
         }
       }
     },
