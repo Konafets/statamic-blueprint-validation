@@ -92,7 +92,14 @@ sections:
         field:
           type: range
       -
-        handle: revealer
+        handle: revealed
+        field:
+          type: text
+          display: 'I am revealed!'
+          if:
+            behold: 'equals true'
+      -
+        handle: behold
         field:
           type: revealer
       -
