@@ -129,6 +129,17 @@ sections:
           color_modes:
             - hex
       -
+        handle: date
+        field:
+          type: date
+          display: Date
+          mode: single
+          earliest_date: '1900-01-01T00:00:00.000Z'
+          columns: 1
+          inline: false
+          rows: 1
+          format: 'Y-m-d'
+      -
         handle: form
         field:
           type: form
@@ -146,17 +157,6 @@ sections:
           min_rows: 0
           add_row: 'Neue Zeile'
           reorderable: true
-      -
-        handle: date
-        field:
-          type: date
-          display: Date
-          mode: single
-          earliest_date: '1900-01-01T00:00:00.000Z'
-          columns: 1
-          inline: false
-          rows: 1
-          format: 'Y-m-d'
       -
         handle: hidden
         field:

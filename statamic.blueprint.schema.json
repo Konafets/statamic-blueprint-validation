@@ -79,13 +79,13 @@
                         "$ref": "#/$defs/color"
                       },
                       {
+                        "$ref": "#/$defs/date"
+                      },
+                      {
                         "$ref": "#/$defs/form"
                       },
                       {
                         "$ref": "#/$defs/grid"
-                      },
-                      {
-                        "$ref": "#/$defs/date"
                       },
                       {
                         "$ref": "#/$defs/hidden"
