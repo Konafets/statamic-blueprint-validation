@@ -367,3 +367,9 @@ sections:
         field:
           type: yaml
           default: '42'
+      -
+        handle: my_content_field
+        field: common.content
+      -
+        handle: another_content_field
+        field: common.content
