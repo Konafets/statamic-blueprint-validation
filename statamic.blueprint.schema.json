@@ -284,6 +284,16 @@
       "properties": {
         "type": {
           "const": "checkboxes"
+        },
+        "inline": {
+          "type": "boolean",
+          "default": "false"
+        },
+        "options": {
+          "type": ["object", "array"]
+        },
+        "default": {
+          "type": "string"
         }
       }
     },

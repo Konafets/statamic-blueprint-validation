@@ -48,6 +48,12 @@ sections:
         handle: checkboxes
         field:
           type: checkboxes
+          inline: false
+          options:
+            donuts: Donuts
+            'ice cream': 'Ice Cream'
+            brownies: Brownies
+          default: donutsx
       -
         handle: code
         field:
