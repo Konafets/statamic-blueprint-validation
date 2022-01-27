@@ -1,4 +1,4 @@
-# Autocompletion and validation of [Statamics](https://statamic.com/) Blueprint YAML configuration
+# A JSON Schema for [Statamic](https://statamic.com/) Blueprint YAML files
 
 ## Introduction
 
