@@ -189,6 +189,7 @@
   },
   "$defs": {
     "array": {
+      "description": "This fieldtype is used to manage key: value array data in the right situation.",
       "type": "object",
       "properties": {
         "display": {
@@ -235,6 +236,7 @@
       "additionalProperties": false
     },
     "assets": {
+      "description": "The assets fieldtype is used to manage and relate files with your entries.",
       "type": "object",
       "properties": {
         "type": {
@@ -272,6 +274,7 @@
       }
     },
     "bard": {
+      "description": "Bard is our recommended fieldtype for creating long form content from the control panel.",
       "type": "object",
       "properties": {
         "type": {
@@ -396,6 +399,7 @@
       }
     },
     "button_group": {
+      "description": "The button group fieldtype is a multiple choice input where you only get one choice.",
       "type": "object",
       "properties": {
         "type": {
@@ -412,6 +416,7 @@
       }
     },
     "checkboxes": {
+      "description": "The checkboxes fieldtype is a multiple choice input.",
       "type": "object",
       "properties": {
         "type": {
@@ -430,6 +435,7 @@
       }
     },
     "code": {
+      "description": "If your content involves code snippets, this is the fieldtype for you.",
       "type": "object",
       "properties": {
         "type": {
@@ -527,6 +533,7 @@
       }
     },
     "color": {
+      "description": "This fieldtype is a highly configurable color picker with simple and advanced UI modes, support for alpha channel, rgba, hsla, hsva, and more.",
       "type": "object",
       "properties": {
         "type": {
@@ -579,65 +586,8 @@
         }
       }
     },
-    "form": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "const": "form"
-        },
-        "placeholder": {
-          "$ref": "#/$defs/placeholder"
-        },
-        "max_items": {
-          "type": "integer",
-          "default": 1
-        }
-      }
-    },
-    "grid": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "const": "grid"
-        },
-        "fields": {
-          "description": "A list of fields, each of which create their own column.",
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
-        "mode": {
-          "description": "The Grid is displayed as a table by default. If you have a large number of columns it can get pretty crowded. Choose stacked mode to group rows similar to Replicator. When Sneak Peek is enabled, Grids automatically toggle into stacked mode.",
-          "type": "string",
-          "enum": [
-            "table",
-            "stacked"
-          ]
-        },
-        "min_rows": {
-          "description": "The minimum number of required rows.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "max_rows": {
-          "description": "The maximum number of rows allowed. Once reached the Add Row button will disappear.",
-          "type": "integer",
-          "minimum": 1
-        },
-        "add_row": {
-          "description": "The Add Row button's label.",
-          "type": "string",
-          "minimum": 1
-        },
-        "reorderable": {
-          "description": "The minimum number of required rows.",
-          "type": "boolean",
-          "default": true
-        }
-      }
-    },
     "date": {
+      "description": "Work with dates, times, and ranges with a variety of user interface options that make you really enjoy basically just picking numbers from a table.",
       "type": "object",
       "properties": {
         "columns": {
@@ -708,7 +658,68 @@
         }
       }
     },
+    "form": {
+      "description": "The Form fieldtype is gives your users a way to pick a form to include along with the current entry.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "form"
+        },
+        "placeholder": {
+          "$ref": "#/$defs/placeholder"
+        },
+        "max_items": {
+          "type": "integer",
+          "default": 1
+        }
+      }
+    },
+    "grid": {
+      "description": "The grid fieldtype is a meta fieldtype, a fieldtype that serves as a container for more fieldtypes.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "grid"
+        },
+        "fields": {
+          "description": "A list of fields, each of which create their own column.",
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "mode": {
+          "description": "The Grid is displayed as a table by default. If you have a large number of columns it can get pretty crowded. Choose stacked mode to group rows similar to Replicator. When Sneak Peek is enabled, Grids automatically toggle into stacked mode.",
+          "type": "string",
+          "enum": [
+            "table",
+            "stacked"
+          ]
+        },
+        "min_rows": {
+          "description": "The minimum number of required rows.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_rows": {
+          "description": "The maximum number of rows allowed. Once reached the Add Row button will disappear.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "add_row": {
+          "description": "The Add Row button's label.",
+          "type": "string",
+          "minimum": 1
+        },
+        "reorderable": {
+          "description": "The minimum number of required rows.",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
     "hidden": {
+      "description": "The hidden field is perfect for setting default data when creating new entries.",
       "type": "object",
       "properties": {
         "type": {
@@ -720,6 +731,7 @@
       }
     },
     "html": {
+      "description": "If you've ever wanted to add a little HTML to your blueprint, this is the way to do it.",
       "type": "object",
       "properties": {
         "type": {
@@ -732,6 +744,7 @@
       }
     },
     "integer": {
+      "description": "The integer fieldtype is a text-style input that only accepts integers (numbers) and has increment and decrement controls.",
       "type": "object",
       "properties": {
         "type": {
@@ -743,6 +756,7 @@
       }
     },
     "link": {
+      "description": "For when you want to create a link to a URL or entry, this fieldtype is here for you.",
       "type": "object",
       "properties": {
         "type": {
@@ -754,6 +768,7 @@
       }
     },
     "list": {
+      "description": "For when you want to manage a simple YAML list, this fieldtype is here for you.",
       "type": "object",
       "properties": {
         "type": {
@@ -765,6 +780,7 @@
       }
     },
     "markdown": {
+      "description": "Write Markdown with the help of formatting buttons, assets integration, fullscreen mode, a Markdown cheatsheet, and HTML preview mode.",
       "type": "object",
       "properties": {
         "type": {
@@ -809,6 +825,7 @@
       }
     },
     "radio": {
+      "description": "The radio fieldtype is a multiple choice input where you only get one choice.",
       "type": "object",
       "properties": {
         "type": {
@@ -830,6 +847,7 @@
       }
     },
     "range": {
+      "description": "Range fields let the user choose a numeric value which must be no less than a given value, and no more than another.",
       "type": "object",
       "properties": {
         "type": {
@@ -859,6 +877,7 @@
       }
     },
     "replicator": {
+      "description": "The Replicator is a meta fieldtype giving you the ability to define sets of fields that you can dynamically piece together in whatever order and arrangement you imagine.",
       "type": "object",
       "properties": {
         "type": {
@@ -876,6 +895,7 @@
       }
     },
     "section": {
+      "description": "",
       "type": "object",
       "properties": {
         "type": {
@@ -884,6 +904,7 @@
       }
     },
     "select": {
+      "description": "Give your users a list of options to choose from.",
       "type": "object",
       "properties": {
         "type": {
@@ -930,6 +951,7 @@
       "required": ["options"]
     },
     "sites": {
+      "description": "",
       "type": "object",
       "properties": {
         "type": {
@@ -944,6 +966,7 @@
       }
     },
     "slug": {
+      "description": "",
       "type": "object",
       "properties": {
         "type": {
@@ -956,6 +979,7 @@
       }
     },
     "structures": {
+      "description": "Use this fieldtype to create a one-way relationship with one or more structures in your site.",
       "type": "object",
       "properties": {
         "type": {
@@ -970,6 +994,7 @@
       }
     },
     "table": {
+      "description": "This fieldtype gives you a way to create flexible tabular data.",
       "type": "object",
       "properties": {
         "type": {
@@ -978,6 +1003,7 @@
       }
     },
     "taggable": {
+      "description": "Users can enter “taggable” values, which are formatted automatically into a YAML list format.",
       "type": "object",
       "properties": {
         "type": {
@@ -989,6 +1015,7 @@
       }
     },
     "taxonomies": {
+      "description": "",
       "type": "object",
       "properties": {
         "type": {
@@ -1003,6 +1030,7 @@
       }
     },
     "template": {
+      "description": "This is generally used as a \"system\" field to control an entry's template.",
       "type": "object",
       "properties": {
         "type": {
@@ -1015,6 +1043,7 @@
       }
     },
     "terms": {
+      "description": "Taxonomies are usually relationships established on the collection-configuration level.",
       "type": "object",
       "properties": {
         "type": {
@@ -1035,6 +1064,7 @@
       }
     },
     "text": {
+      "description": "A text field that has the ability to morph into an intergalactic dragon and devour entire planets!",
       "type": "object",
       "properties": {
         "type": {
@@ -1079,6 +1109,7 @@
       }
     },
     "textarea": {
+      "description": "A long textarea field that functions like a swimming pool for letters and numbers on a hot day.",
       "type": "object",
       "properties": {
         "type": {
@@ -1099,6 +1130,7 @@
       }
     },
     "time": {
+      "description": "The original time field from the set of Kiefer Sutherland's hit drama \"24\".",
       "type": "object",
       "properties": {
         "type": {
@@ -1111,6 +1143,7 @@
       }
     },
     "toggle": {
+      "description": "A nice little toggle switch generally used to manage settings-type variables.",
       "type": "object",
       "properties": {
         "type": {
@@ -1123,6 +1156,7 @@
       }
     },
     "user_groups": {
+      "description": "The User Group fieldtype gives your users a way to pick one or more User Groups to attach to the current entry.",
       "type": "object",
       "properties": {
         "type": {
@@ -1139,6 +1173,7 @@
       }
     },
     "user_roles": {
+      "description": "The User Role fieldtype gives your users a way to pick one or more User Groups to attach to the current entry.",
       "type": "object",
       "properties": {
         "type": {
@@ -1155,6 +1190,7 @@
       }
     },
     "users": {
+      "description": "The most common use for the Users fieldtype is to set the \"author\" for entries, but it's not the only use.",
       "type": "object",
       "properties": {
         "type": {
@@ -1175,6 +1211,7 @@
       }
     },
     "video": {
+      "description": "",
       "type": "object",
       "properties": {
         "type": {
@@ -1191,6 +1228,7 @@
       "additionalProperties": false
     },
     "yaml": {
+      "description": "This field is a code fieldtype that gets saved as YAML instead of a string.",
       "type": "object",
       "properties": {
         "type": {
