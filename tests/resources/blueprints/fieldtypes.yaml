@@ -44,6 +44,11 @@ sections:
         handle: button_group
         field:
           type: button_group
+          options:
+            left: Left
+            middle: Middle
+            right: Right
+          default: left
       -
         handle: checkboxes
         field:

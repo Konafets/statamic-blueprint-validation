@@ -276,6 +276,14 @@
       "properties": {
         "type": {
           "const": "button_group"
+        },
+        "options": {
+          "description": "Set the array keys and their optional labels.",
+          "type": ["object", "array"]
+        },
+        "default": {
+          "description": "Set the default value.",
+          "type": "string"
         }
       }
     },
