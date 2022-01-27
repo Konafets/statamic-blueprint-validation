@@ -39,7 +39,40 @@ sections:
         handle: bard
         field:
           type: bard
-          icon: Foo
+          always_show_set_button: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: intro
+                  field: page.intro
+          buttons:
+            - h2
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          container: main
+          save_html: true
+          toolbar_mode: fixed
+          link_noopener: true
+          link_noreferrer: true
+          target_blank: true
+          link_collections:
+            - fieldtypes
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
       -
         handle: button_group
         field:

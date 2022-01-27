@@ -248,6 +248,101 @@
         "type": {
           "const": "bard"
         },
+        "always_show_set_button": {
+          "description": "Enable to always show the \"Add Set\" button.",
+          "type": "boolean",
+          "default": false
+        },
+        "sets": {
+          "description": "Sets are configurable blocks of fields that can be inserted anywhere in your Bard content.",
+          "type": "object"
+        },
+        "buttons": {
+          "description": "Choose which buttons to show in the toolbar.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": true,
+            "enum": [
+              "h2",
+              "h3",
+              "bold",
+              "italic",
+              "unorderedlist",
+              "orderedlist",
+              "removeformat",
+              "quote",
+              "anchor",
+              "image",
+              "table"
+            ]
+          }
+        },
+        "container": {
+          "description": "Choose which asset container to use for this field.",
+          "type": "string"
+        },
+        "save_html": {
+          "description": "Save HTML instead of structured data. This simplifies but limits control of your template markup.",
+          "type": "boolean",
+          "default": false
+        },
+        "toolbar_mode": {
+          "description": "Choose which style of toolbar you prefer.",
+          "type": "string",
+          "enum": [
+            "fixed",
+            "floating"
+          ],
+          "default": "fixed"
+        },
+        "link_noopener": {
+          "description": "Set rel=\"noopener\" on all links.",
+          "type": "boolean",
+          "default": false
+        },
+        "link_noreferrer": {
+          "description": "Set rel=\"noreferrer\" on all links.",
+          "type": "boolean",
+          "default": false
+        },
+        "target_blank": {
+          "description": "Set target=\"_blank\" on all links.",
+          "type": "boolean",
+          "default": false
+        },
+        "link_collections": {
+          "description": "Entries from these collections will be available in the link selector. Leaving this empty will make all entries available.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reading_time": {
+          "description": "Show estimated reading time at the bottom of the field.",
+          "type": "boolean",
+          "default": false
+        },
+        "fullscreen": {
+          "description": "Enable to toggle into fullscreen mode.",
+          "type": "boolean",
+          "default": true
+        },
+        "allow_source": {
+          "description": "Allow Source Mode",
+          "type": "boolean",
+          "default": true
+        },
+        "enable_input_rules": {
+          "description": "Enable Input Rules",
+          "type": "boolean",
+          "default": true
+        },
+        "enable_paste_rules": {
+          "description": "Enables Markdown-style shortcuts when typing content.",
+          "type": "boolean",
+          "default": true
+        },
         "display": {
           "$ref": "#/$defs/display"
         },
