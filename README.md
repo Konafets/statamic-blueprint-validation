@@ -17,6 +17,14 @@ The schema supports all fieldtypes, their options and the validation rules.
 
 ![Example](assets/setup.png)
 
+## Sublime
+
+TODO
+
+## Visual Studio Code
+
+TODO
+
 ## Credits
 
 * Thanks [Jonas](https://github.com/jonassiewertsen) for providing a test blueprint
