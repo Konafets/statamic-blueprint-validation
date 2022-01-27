@@ -1,5 +1,6 @@
 {
   "title": "A Statamic Blueprint JSON Schema",
+  "$id": "https://arroba-it.de/statamic.blueprint.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
