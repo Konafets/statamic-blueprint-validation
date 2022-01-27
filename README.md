@@ -1,12 +1,14 @@
 # Autocompletion and validation of [Statamics](https://statamic.com/) Blueprint YAML configuration
 
-**This is work in progress**
+## Introduction
+
+The schema supports all fieldtypes, their options and the validation rules.  
 
 ![Example](assets/Demo.gif)
 
 ## Setup
 
-### PhpStorm
+### PhpStorm | IntelliJ
 
 1. Open PhpStorm and switch to *File > Preferences > Languages & Frameworks > Schemas and DTDs > JSON Schema Mappings*
 2. Add a new entry with the following options
@@ -17,4 +19,4 @@
 
 ## Credits
 
-* Thanks to [Jonas](https://github.com/jonassiewertsen) for providing a testing blueprint
+* Thanks [Jonas](https://github.com/jonassiewertsen) for providing a test blueprint
