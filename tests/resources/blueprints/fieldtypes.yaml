@@ -140,6 +140,15 @@ sections:
           rows: 1
           format: 'Y-m-d'
       -
+        handle: entries
+        field:
+          type: entries
+          max_items: 10
+          mode: default
+          create: true
+          collections:
+            - extending-docs
+      -
         handle: form
         field:
           type: form

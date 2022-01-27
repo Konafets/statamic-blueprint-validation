@@ -82,6 +82,9 @@
                         "$ref": "#/$defs/date"
                       },
                       {
+                        "$ref": "#/$defs/entries"
+                      },
+                      {
                         "$ref": "#/$defs/form"
                       },
                       {
@@ -655,6 +658,32 @@
         "type": {
           "type": "string",
           "const": "date"
+        }
+      }
+    },
+    "entries": {
+      "description": "",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "entries"
+        },
+        "max_items": {
+          "$ref": "#/$defs/max_items"
+        },
+        "mode": {
+          "$ref": "#/$defs/userSelectModes"
+        },
+        "create": {
+          "type": "boolean",
+          "default": true
+        },
+        "collections": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
