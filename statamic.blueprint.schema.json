@@ -239,6 +239,35 @@
       "properties": {
         "type": {
           "const": "assets"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "grid",
+            "list"
+          ],
+          "default": "list"
+        },
+        "container": {
+          "type": "string"
+        },
+        "folder": {
+          "type": "string"
+        },
+        "restrict": {
+          "type": "boolean",
+          "default": false
+        },
+        "allow_uploads": {
+          "type": "boolean",
+          "default": true
+        },
+        "show_filename": {
+          "type": "boolean",
+          "default": true
+        },
+        "max_files": {
+          "type": "integer"
         }
       }
     },

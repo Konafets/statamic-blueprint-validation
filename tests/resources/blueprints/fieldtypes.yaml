@@ -35,6 +35,13 @@ sections:
         handle: assets
         field:
           type: assets
+          mode: list
+          container: main
+          folder: fieldtypes/screenshots
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 42
       -
         handle: bard
         field:
