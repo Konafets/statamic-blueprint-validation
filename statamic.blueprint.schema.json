@@ -243,7 +243,7 @@
           "type": "string"
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "assets": {
       "description": "The assets fieldtype is used to manage and relate files with your entries.",
@@ -281,7 +281,8 @@
         "max_files": {
           "type": "integer"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "bard": {
       "description": "Bard is our recommended fieldtype for creating long form content from the control panel.",
@@ -406,7 +407,8 @@
         "validate": {
           "$ref": "#/$defs/validate"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "button_group": {
       "description": "The button group fieldtype is a multiple choice input where you only get one choice.",
@@ -423,7 +425,8 @@
           "description": "Set the default value.",
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "checkboxes": {
       "description": "The checkboxes fieldtype is a multiple choice input.",
@@ -442,7 +445,8 @@
         "default": {
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "code": {
       "description": "If your content involves code snippets, this is the fieldtype for you.",
@@ -523,7 +527,8 @@
           "type": "boolean",
           "default": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "collections": {
       "description": "This fieldtype is used to view and select from a list of Collections.",
@@ -540,7 +545,8 @@
           "description": "Choose your preferred UI style.",
           "$ref": "#/$defs/userSelectModes"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "color": {
       "description": "This fieldtype is a highly configurable color picker with simple and advanced UI modes, support for alpha channel, rgba, hsla, hsva, and more.",
@@ -595,7 +601,8 @@
             ]
           }
         }
-      }
+      },
+      "additionalProperties": true
     },
     "date": {
       "description": "Work with dates, times, and ranges with a variety of user interface options that make you really enjoy basically just picking numbers from a table.",
@@ -667,7 +674,8 @@
           "type": "string",
           "const": "date"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "entries": {
       "description": "",
@@ -693,7 +701,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": true
     },
     "form": {
       "description": "The Form fieldtype is gives your users a way to pick a form to include along with the current entry.",
@@ -709,7 +718,8 @@
           "type": "integer",
           "default": 1
         }
-      }
+      },
+      "additionalProperties": true
     },
     "grid": {
       "description": "The grid fieldtype is a meta fieldtype, a fieldtype that serves as a container for more fieldtypes.",
@@ -753,7 +763,8 @@
           "type": "boolean",
           "default": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "hidden": {
       "description": "The hidden field is perfect for setting default data when creating new entries.",
@@ -765,7 +776,8 @@
         "default": {
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "html": {
       "description": "If you've ever wanted to add a little HTML to your blueprint, this is the way to do it.",
@@ -778,7 +790,8 @@
           "description": "Store whatever HTML you want — it's up to you.",
           "type": ["string"]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "import": {
       "description": "Importing Fieldsets. They serve to create reusable sets of fields, just like v2.",
@@ -794,7 +807,8 @@
         "default": {
           "type": ["string", "integer"]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "link": {
       "description": "For when you want to create a link to a URL or entry, this fieldtype is here for you.",
@@ -806,7 +820,8 @@
         "collections": {
           "type": "array"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "list": {
       "description": "For when you want to manage a simple YAML list, this fieldtype is here for you.",
@@ -818,7 +833,8 @@
         "default": {
           "type": "array"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "markdown": {
       "description": "Write Markdown with the help of formatting buttons, assets integration, fullscreen mode, a Markdown cheatsheet, and HTML preview mode.",
@@ -863,7 +879,8 @@
           "description": "Set the default value.",
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "radio": {
       "description": "The radio fieldtype is a multiple choice input where you only get one choice.",
@@ -885,7 +902,8 @@
           "type": "boolean",
           "default": false
         }
-      }
+      },
+      "additionalProperties": true
     },
     "range": {
       "description": "Range fields let the user choose a numeric value which must be no less than a given value, and no more than another.",
@@ -915,7 +933,8 @@
           "description": "Set the default value.",
           "type": "integer"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "replicator": {
       "description": "The Replicator is a meta fieldtype giving you the ability to define sets of fields that you can dynamically piece together in whatever order and arrangement you imagine.",
@@ -924,7 +943,8 @@
         "type": {
           "const": "replicator"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "revealer": {
       "description": "The revealer is a simple button that reveals conditional fields without saving any additional data.",
@@ -933,7 +953,8 @@
         "type": {
           "const": "revealer"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "section": {
       "description": "",
@@ -942,7 +963,8 @@
         "type": {
           "const": "section"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "select": {
       "description": "Give your users a list of options to choose from.",
@@ -989,6 +1011,7 @@
           "default": false
         }
       },
+      "additionalProperties": true,
       "required": ["options"]
     },
     "sites": {
@@ -1004,7 +1027,8 @@
         "mode": {
           "$ref": "#/$defs/userSelectModes"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "slug": {
       "description": "",
@@ -1017,7 +1041,8 @@
           "type": "boolean",
           "default": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "structures": {
       "description": "Use this fieldtype to create a one-way relationship with one or more structures in your site.",
@@ -1032,7 +1057,8 @@
         "mode": {
           "$ref": "#/$defs/userSelectModes"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "table": {
       "description": "This fieldtype gives you a way to create flexible tabular data.",
@@ -1041,7 +1067,8 @@
         "type": {
           "const": "table"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "taggable": {
       "description": "Users can enter “taggable” values, which are formatted automatically into a YAML list format.",
@@ -1053,7 +1080,8 @@
         "placeholder": {
           "$ref": "#/$defs/placeholder"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "taxonomies": {
       "description": "",
@@ -1068,7 +1096,8 @@
         "mode": {
           "$ref": "#/$defs/userSelectModes"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "template": {
       "description": "This is generally used as a \"system\" field to control an entry's template.",
@@ -1081,7 +1110,8 @@
           "type": "boolean",
           "default": true
         }
-      }
+      },
+      "additionalProperties": true
     },
     "terms": {
       "description": "Taxonomies are usually relationships established on the collection-configuration level.",
@@ -1102,7 +1132,8 @@
         "taxonomies": {
           "type": "array"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "text": {
       "description": "A text field that has the ability to morph into an intergalactic dragon and devour entire planets!",
@@ -1147,7 +1178,8 @@
         "prepend": {
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "textarea": {
       "description": "A long textarea field that functions like a swimming pool for letters and numbers on a hot day.",
@@ -1168,7 +1200,8 @@
         "default": {
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "time": {
       "description": "The original time field from the set of Kiefer Sutherland's hit drama \"24\".",
@@ -1181,7 +1214,8 @@
           "type": "string",
           "pattern": "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "toggle": {
       "description": "A nice little toggle switch generally used to manage settings-type variables.",
@@ -1194,7 +1228,8 @@
           "type": "boolean",
           "default": false
         }
-      }
+      },
+      "additionalProperties": true
     },
     "user_groups": {
       "description": "The User Group fieldtype gives your users a way to pick one or more User Groups to attach to the current entry.",
@@ -1211,7 +1246,8 @@
         "mode": {
           "$ref": "#/$defs/userSelectModes"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "user_roles": {
       "description": "The User Role fieldtype gives your users a way to pick one or more User Groups to attach to the current entry.",
@@ -1228,7 +1264,8 @@
         "mode": {
           "$ref": "#/$defs/userSelectModes"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "users": {
       "description": "The most common use for the Users fieldtype is to set the \"author\" for entries, but it's not the only use.",
@@ -1249,7 +1286,8 @@
           "type": "string",
           "const": "current"
         }
-      }
+      },
+      "additionalProperties": true
     },
     "video": {
       "description": "",
@@ -1266,7 +1304,7 @@
           "format": "url"
         }
       },
-      "additionalProperties": false
+      "additionalProperties": true
     },
     "yaml": {
       "description": "This field is a code fieldtype that gets saved as YAML instead of a string.",
@@ -1278,7 +1316,8 @@
         "default": {
           "type": ["object", "string"]
         }
-      }
+      },
+      "additionalProperties": true
     },
     "display": {
       "description": "The label shown above the field.",

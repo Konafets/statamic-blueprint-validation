@@ -1,0 +1,549 @@
+title: 'Docs Page'
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        import: page
+      -
+        handle: toggle
+        field:
+          default: false
+          display: Toggle
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          if:
+            date: 'not 1900-01-01'
+      -
+        handle: date
+        field:
+          mode: single
+          time_enabled: true
+          time_required: true
+          earliest_date: '1900-01-01'
+          full_width: false
+          inline: true
+          columns: 1
+          rows: 1
+          display: Date
+          type: date
+          icon: date
+          instructions: 'Enter Date herex'
+          listable: listable
+          instructions_position: above
+      -
+        handle: array_predefined_keys
+        field:
+          mode: keyed
+          type: array
+          keys:
+            Street: null
+            City: null
+            Country: null
+      -
+        handle: address_w_o_predefined_keys
+        field:
+          mode: dynamic
+          display: 'Address w/o predefined keys'
+          type: array
+          keys:
+            - street
+            - city
+            - country
+      -
+        handle: dynamic_array
+        field:
+          mode: dynamic
+          display: 'Dynamic Array'
+          type: array
+          icon: array
+          instructions: 'Dynamic Array'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: array
+        field:
+          mode: keyed
+          display: foo
+          type: array
+          icon: array
+          listable: hidden
+          instructions_position: above
+      -
+        handle: youtube
+        field:
+          type: video
+          default: 'https://www.youtube.com/watch?v=s9F5fhJQo34'
+          placeholder: Placeholder
+          display: Video
+          icon: video
+          listable: hidden
+          instructions_position: above
+      -
+        handle: users
+        field:
+          max_items: 1
+          mode: select
+          display: Users
+          type: users
+          icon: users
+          listable: hidden
+          instructions_position: above
+      -
+        handle: user_roles
+        field:
+          mode: default
+          display: 'User Roles'
+          type: user_roles
+          icon: user_roles
+          listable: hidden
+          instructions_position: above
+      -
+        handle: user_groups
+        field:
+          max_items: 2
+          mode: default
+          display: 'User Groups'
+          type: user_groups
+          icon: user_groups
+          listable: hidden
+          instructions_position: above
+      -
+        handle: time
+        field:
+          default: '12:00'
+          display: Time
+          type: time
+          icon: time
+          listable: hidden
+          instructions_position: above
+      -
+        handle: textarea
+        field:
+          placeholder: Platzhalter
+          character_limit: '10'
+          antlers: true
+          default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.'
+          display: Textarea
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+      -
+        handle: text
+        field:
+          placeholder: Platzhalter
+          input_type: color
+          character_limit: 100
+          prepend: Prepend
+          append: 'Text after'
+          antlers: false
+          default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.'
+          display: Text
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: taxonomy_terms
+        field:
+          max_items: 7
+          mode: default
+          create: true
+          taxonomies:
+            - categories
+          display: 'Taxonomy Terms'
+          type: terms
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+      -
+        handle: yaml
+        field:
+          default: '10'
+          display: YAML
+          type: yaml
+          icon: yaml
+          listable: hidden
+          instructions_position: above
+      -
+        handle: template_foo
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+      -
+        handle: taxonomies
+        field:
+          max_items: 1
+          mode: default
+          display: Taxonomies
+          type: taxonomies
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+      -
+        handle: taggable
+        field:
+          placeholder: Platzhalter
+          display: Taggable
+          type: taggable
+          icon: tags
+          listable: hidden
+          instructions_position: above
+      -
+        handle: table
+        field:
+          display: Table
+          type: table
+          icon: table
+          listable: hidden
+          instructions_position: above
+      -
+        handle: structures
+        field:
+          max_items: 10
+          mode: default
+          display: Structures
+          type: structures
+          icon: structures
+          listable: hidden
+          instructions_position: above
+      -
+        handle: slug_foo
+        field:
+          generate: true
+          display: Slug
+          type: slug
+          icon: slug
+          listable: hidden
+          instructions_position: above
+      -
+        handle: sites
+        field:
+          max_items: 10
+          mode: default
+          display: Sites
+          type: sites
+          icon: sites
+          listable: hidden
+          instructions_position: above
+      -
+        handle: select
+        field:
+          type: select
+          placeholder: Platzhalter
+          options:
+            Foo: Bar
+            Bar: Baz
+          multiple: true
+          max_items: 10
+          clearable: true
+          searchable: true
+          taggable: true
+          push_tags: true
+          cast_booleans: true
+          default: 'Default Value'
+      -
+        handle: section
+        field:
+          display: Section
+          type: section
+          icon: section
+          listable: hidden
+          instructions_position: above
+      -
+        handle: range
+        field:
+          display: Revealer
+          type: revealer
+          icon: revealer
+          listable: hidden
+          instructions_position: above
+      -
+        handle: range
+        field:
+          step: 1
+          min: 0
+          max: 100
+          default: 42
+          prepend: prepend
+          append: append
+          display: Range
+          type: range
+          icon: range
+          listable: hidden
+          instructions_position: above
+      -
+        handle: radio
+        field:
+          options:
+            Fruit: Orangen
+            Vehicles: Boats
+          inline: false
+          cast_booleans: false
+          default: 'Default Value'
+          display: Radio
+          type: radio
+          icon: radio
+          listable: hidden
+          instructions_position: above
+      -
+        handle: markdown
+        field:
+          container: main
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At in tellus integer feugiat scelerisque. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. In nibh mauris cursus mattis. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vel orci porta non pulvinar neque laoreet suspendisse. Aliquam ut porttitor leo a diam sollicitudin. Tincidunt tortor aliquam nulla facilisi. Mauris augue neque gravida in fermentum et. Velit egestas dui id ornare arcu.'
+          display: Markdown
+          type: markdown
+          icon: markdown
+          listable: hidden
+          instructions_position: above
+      -
+        handle: list
+        field:
+          default:
+            - 'Knife-Wrench (for kids!)'
+            - Kite-Fork
+            - 'Apple-Cranberry hybrid (calling it Appleberry™)'
+          display: List
+          type: list
+          icon: list
+          listable: hidden
+          instructions_position: above
+      -
+        handle: link
+        field:
+          collections:
+            - extending-docs
+          display: Link
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+      -
+        handle: integer
+        field:
+          default: '42'
+          display: Integer
+          type: integer
+          icon: integer
+          listable: hidden
+          instructions_position: above
+      -
+        handle: html
+        field:
+          html: '<html><head></head><body></body></html>'
+          display: HTML
+          type: html
+          icon: html
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hidden
+        field:
+          default: '42'
+          display: Hidden
+          type: hidden
+          icon: hidden
+          listable: hidden
+          instructions_position: above
+      -
+        handle: grid
+        field:
+          fields:
+            -
+              handle: alt_nav_title
+              field: page.nav_title
+          mode: table
+          max_rows: 10
+          min_rows: 0
+          add_row: 'Neue Zeile'
+          reorderable: true
+          display: Grid
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+      -
+        handle: form
+        field:
+          placeholder: Platzholder
+          max_items: 1
+          display: Form
+          type: form
+          icon: form
+          listable: hidden
+          instructions_position: above
+      -
+        handle: color
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - hex
+          display: Color
+          type: color
+          icon: color
+          listable: hidden
+          instructions_position: above
+      -
+        handle: collections
+        field:
+          max_items: -1
+          mode: default
+          display: Collections
+          type: collections
+          icon: collections
+          listable: hidden
+          instructions_position: above
+      -
+        handle: code
+        field:
+          theme: light
+          mode: htmlmixed
+          indent_type: tabs
+          indent_size: 4
+          key_map: default
+          line_numbers: true
+          line_wrapping: true
+          display: Code
+          type: code
+          icon: code
+          listable: hidden
+          instructions_position: above
+      -
+        handle: checkboxes
+        field:
+          inline: false
+          options:
+            donuts: Donuts
+            'ice cream': 'Ice Cream'
+            brownies: Brownies
+          default: donutsx
+          display: Checkboxes
+          type: checkboxes
+          icon: checkboxes
+          listable: hidden
+          instructions_position: above
+      -
+        handle: button_group
+        field:
+          options:
+            left: Left
+            middle: Middle
+            right: Right
+          default: left
+          display: 'Button Group'
+          type: button_group
+          icon: button_group
+          listable: hidden
+          instructions_position: above
+      -
+        handle: bard
+        field:
+          always_show_set_button: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: intro
+                  field: page.intro
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          container: main
+          save_html: true
+          toolbar_mode: fixed
+          link_noopener: true
+          link_noreferrer: true
+          target_blank: true
+          link_collections:
+            - fieldtypes
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          display: Bard
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+      -
+        handle: assets
+        field:
+          mode: list
+          container: main
+          folder: fieldtypes/screenshots
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 42
+          display: Assets
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+      -
+        handle: entries
+        field:
+          max_items: 10
+          mode: default
+          create: true
+          collections:
+            - extending-docs
+          display: Entries
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+            - 'unique_entry_value:{collection},{id},{site}'
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - docs
+          max_items: 1
+          listable: false
+          localizable: true
