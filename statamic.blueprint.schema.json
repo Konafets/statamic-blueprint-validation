@@ -19,10 +19,6 @@
         "^[A-Za-z]+?$": {
           "type": "object",
           "description": "The handle (name) of a section. This one is on you.",
-          "required": [
-            "display",
-            "fields"
-          ],
           "properties": {
             "display": {
               "type": "string",
