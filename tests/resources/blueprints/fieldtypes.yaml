@@ -344,6 +344,8 @@ sections:
           icon: toggle
           listable: hidden
           instructions_position: above
+          if:
+            date: 'not 1900-01-01'
       -
         handle: user_group
         field:
