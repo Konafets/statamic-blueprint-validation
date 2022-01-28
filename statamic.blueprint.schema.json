@@ -30,9 +30,6 @@
               "uniqueItems": true,
               "items": {
                 "type": "object",
-                "required": [
-                  "handle"
-                ],
                 "properties": {
                   "handle": {
                     "type": "string",
@@ -45,6 +42,12 @@
                         "type": "string"
                       }
                     }
+                  },
+                  "import": {
+                    "type": "string"
+                  },
+                  "prefix": {
+                    "type": "string"
                   },
                   "field": {
                     "description": "The definition of a single field.",
@@ -181,6 +184,10 @@
                       "type"
                     ]
                   }
+                },
+                "dependentRequired": {
+                  "field": ["handle"],
+                  "import": ["prefix"]
                 }
               }
             }
@@ -770,6 +777,10 @@
           "type": ["string"]
         }
       }
+    },
+    "import": {
+      "description": "Importing Fieldsets. They serve to create reusable sets of fields, just like v2.",
+      "type": "string"
     },
     "integer": {
       "description": "The integer fieldtype is a text-style input that only accepts integers (numbers) and has increment and decrement controls.",

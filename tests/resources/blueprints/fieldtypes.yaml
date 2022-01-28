@@ -177,6 +177,9 @@ sections:
           type: html
           html: '<html><head></head><body></body></html>'
       -
+        import: page
+        prefix: foo_
+      -
         handle: integer
         field:
           type: integer
