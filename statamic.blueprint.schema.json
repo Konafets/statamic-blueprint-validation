@@ -14,7 +14,6 @@
       "title": "The Sections",
       "description": "At its most basic, a blueprint has sections. A section has a handle, a display name, and an array of fields:",
       "type": "object",
-      "minItems": 1,
       "additionalProperties": false,
       "patternProperties": {
         "^[A-Za-z]+?$": {
