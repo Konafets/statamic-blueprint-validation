@@ -340,6 +340,10 @@ sections:
         field:
           type: toggle
           default: false
+          display: Toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
       -
         handle: user_group
         field:
