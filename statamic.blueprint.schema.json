@@ -17,16 +17,16 @@
       "additionalProperties": false,
       "patternProperties": {
         "^[A-Za-z]+?$": {
-          "type": "object",
           "description": "The handle (name) of a section. This one is on you.",
+          "type": "object",
           "properties": {
             "display": {
-              "type": "string",
-              "description": "The displayed text."
+              "description": "The displayed text.",
+              "type": "string"
             },
             "fields": {
-              "type": "array",
               "description": "Here you define the fields of this section.",
+              "type": "array",
               "uniqueItems": true,
               "items": {
                 "type": "object",
