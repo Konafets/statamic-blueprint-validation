@@ -28,6 +28,7 @@
               "description": "Here you define the fields of this section.",
               "type": "array",
               "uniqueItems": true,
+              "uniqueItemProperties": ["handle"],
               "items": {
                 "type": "object",
                 "properties": {
