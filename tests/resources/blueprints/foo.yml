@@ -22,9 +22,6 @@ sections:
           instructions: Foo Bar
           instructions_position: above
           display: Toggle
-
-
-
       -
         handle: meta_description
         type: textarea
