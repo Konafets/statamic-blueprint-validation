@@ -3,6 +3,7 @@ const yaml = require('js-yaml');
 const addFormats = require('ajv-formats');
 const Ajv2020 = require('ajv/dist/2020')
 const ajv = new Ajv2020({ strict: false, allErrors: true })
+require("ajv-keywords")(ajv)
 addFormats(ajv);
 
 let schema = JSON.parse(fs.readFileSync('statamic.blueprint.schema.json', 'utf8'));
