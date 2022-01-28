@@ -12,17 +12,12 @@ let schema = JSON.parse(fs.readFileSync('statamic.blueprint.schema.json', 'utf8'
 
 const validate = ajv.compile(schema);
 
-console.log('All Fieldtypes');
-const foo = yaml.load(fs.readFileSync('tests/resources/blueprints/fieldtypes.yaml', {encoding: 'utf-8'}));
-const valid = validate(foo);
+console.log('Testing Fieldtypes');
+const fieldtypes = yaml.load(fs.readFileSync('tests/resources/blueprints/fieldtypes.yaml', {encoding: 'utf-8'}));
+let valid = validate(fieldtypes);
 if (valid) {
     console.log("Is valid.");
 } else {
     console.log(validate.errors);
 }
 
-//
-// const foo = yaml.load(fs.readFileSync('tests/resources/blueprints/foo.yml', {encoding: 'utf-8'}));
-//
-// const valid = validate(foo)
-// if (!valid) console.log(validate.errors)
