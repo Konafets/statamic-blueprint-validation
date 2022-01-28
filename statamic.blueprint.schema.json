@@ -550,7 +550,8 @@
         },
         "swatches": {
           "description": "Pre-define colors that can be selected from a list. Supports all color mode formats.",
-          "type": "array"
+          "type": "array",
+          "uniqueItems": true
         },
         "theme": {
           "description": "Choose between a classic and a simpler nano (mini) theme. Default: classic.",
