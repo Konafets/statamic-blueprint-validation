@@ -12,6 +12,7 @@ sections:
             - required
       -
         import: page
+        prefix: favorite_
       -
         handle: toggle
         field:
@@ -265,7 +266,7 @@ sections:
           listable: hidden
           instructions_position: above
       -
-        handle: range
+        handle: ranges
         field:
           display: Revealer
           type: revealer

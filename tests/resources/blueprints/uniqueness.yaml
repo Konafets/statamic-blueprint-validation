@@ -1,0 +1,18 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: foo
+        field:
+            type: date
+      -
+        handle: bar
+        field:
+            type: date
+      -
+        handle: baz
+        field:
+            type: color
+            swatches:
+              - green

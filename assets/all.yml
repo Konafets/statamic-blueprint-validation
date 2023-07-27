@@ -1,0 +1,11 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: colorx
+        swatches:
+          - green
+          - yellow
+        theme: classic
+        lock_opacity: false
