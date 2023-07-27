@@ -251,9 +251,6 @@
         "dependentRequired": {
           "field": [
             "handle"
-          ],
-          "import": [
-            "prefix"
           ]
         }
       }

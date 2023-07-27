@@ -23,6 +23,7 @@ tabs:
         fields:
           -
             import: page_builder
+            prefix: foo_
   seo:
     display: SEO
     sections:
@@ -32,12 +33,14 @@ tabs:
         fields:
           -
             import: 'statamic-peak-seo::seo_basic'
+            prefix: foo_
       -
         display: Advanced
         instructions: 'Advanced SEO settings.'
         fields:
           -
             import: 'statamic-peak-seo::seo_advanced'
+            prefix: foo_
       -
         display: 'Open Graph'
         instructions: 'Open Graph meta tags for social sharing.'

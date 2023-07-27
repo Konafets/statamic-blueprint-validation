@@ -21,3 +21,29 @@ if (valid) {
     console.log(validate.errors);
 }
 
+console.log('Testing Uniqness');
+const uniqueness = yaml.load(fs.readFileSync('tests/resources/blueprints/uniqueness.yaml', {encoding: 'utf-8'}));
+valid = validate(uniqueness);
+if (valid) {
+    console.log("Is valid.");
+} else {
+    console.log(validate.errors);
+}
+
+console.log('Testing Page Statamic 3');
+const page_statamic3 = yaml.load(fs.readFileSync('tests/resources/blueprints/page_statamic3.yaml', {encoding: 'utf-8'}));
+valid = validate(page_statamic3);
+if (valid) {
+    console.log("Is valid.");
+} else {
+    console.log(validate.errors);
+}
+
+console.log('Testing Page Statamic 4');
+const page_statamic4 = yaml.load(fs.readFileSync('tests/resources/blueprints/page_statamic4.yaml', {encoding: 'utf-8'}));
+valid = validate(page_statamic4);
+if (valid) {
+    console.log("Is valid.");
+} else {
+    console.log(validate.errors);
+}
