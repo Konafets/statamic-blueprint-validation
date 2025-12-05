@@ -153,6 +153,9 @@
                 "$ref": "#/$defs/form"
               },
               {
+                "$ref": "#/$defs/group"
+              },
+              {
                 "$ref": "#/$defs/grid"
               },
               {
@@ -786,6 +789,23 @@
         "max_items": {
           "type": "integer",
           "default": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "group": {
+      "description": "The group fieldtype is a simple container that holds additional fields you would like grouped visually as well as under a parent key.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "group"
+        },
+        "fields": {
+          "description": "A list of fields within the group.",
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
         }
       },
       "additionalProperties": true
