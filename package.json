@@ -28,6 +28,6 @@
     "ajv-formats": "^2.1.1",
     "ajv-keywords": "^5.1.0",
     "fs": "0.0.1-security",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.1"
   }
 }
